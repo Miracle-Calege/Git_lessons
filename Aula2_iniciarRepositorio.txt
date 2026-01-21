@@ -1,0 +1,5 @@
+
+git init->inicia um repositorio(deve ser usado dentro da pasta que vamos usar), este comando cria uma pasta .git(oculta) onde ficarao os dados
+git status-> mostra o status do git
+rm -rf .git->apaga o repositorio git
+
