@@ -1,0 +1,10 @@
+//andando entre commits/snapshots
+
+git checkout numero do commit(e so usar o comando git log para saber o numero do commit)-> para ir para um determinado commit
+
+ex:git checkout d44955b2884c50b08ee7faa0f75411c026609cc6
+ex:git checkout d44955b(ou podemos usar somente os 7 primeiros digitos)
+
+git checkout master-> vai para o ultimo commit
+
+
