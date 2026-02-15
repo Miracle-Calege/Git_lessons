@@ -1,0 +1,13 @@
+//criar e enviar um projecto para github
+
+1.Criar um repositorio no github
+
+2.Ir para onde esta escrito "…or push an existing repository from the command line"
+
+3.copiar o primeiro link(ex:git remote add origin https://github.com/Miracle-Calege/exemplo_mandadoProjectoParaGithub.git)
+
+4. colocar o link do ponto 3 no terminal->enter
+
+5.copiar estas linhas : git branch -M main
+git push -u origin main
+
