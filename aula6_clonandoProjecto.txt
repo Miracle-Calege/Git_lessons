@@ -1,0 +1,6 @@
+ //clonando um projecto
+ 
+ git clone url(tiramos o url do github)
+ 
+ ex: git clone https://github.com/jacksonpires/rails_completo_udemy_modulo3.git
+ 

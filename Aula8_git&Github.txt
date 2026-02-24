@@ -1,0 +1,5 @@
+O que e git?
+->Um sistema que vai guardar grvacoes de mudancas nos teus arquivos onde podemos recuar para um determinado estagio antes de uma determinada alteracao ter sido feita.
+
+o que e github?
+-> E um servico online onde podemos guardar os nossos projectos e partilhar com outros desenvolvedores.

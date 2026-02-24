@@ -1,0 +1,12 @@
+
+git add nome do arquivo->fazer com que um arquivo seja rastreado,apos qualquer modificacao 
+ex:git add tcc.txt
+
+git add .->adiciona todos os arquivos modificados e novos
+
+git commit -m "mensagem"->faz o commit(gravacao) e anexa uma mensagem(sugestiva)
+
+ex:git commit -m "Meu primeiro commit"
+
+git log->mostra os detalhes dos commits
+
