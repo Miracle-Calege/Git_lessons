@@ -6,6 +6,14 @@ Modified-> modificado, mas ainda nao fez commit
 
 staged-> adicionar o arquivo modificado para fazer parte do proximo commit
 
+branch-> é uma alteração num dos commits
+
+Merge->combina mudanças de uma branch com outra
+
 workflow
 
 alteramos o arquivo-> git add arquivo/ git add . -> git status(para visualizar o status/deve estar verde para mostrar que foi adicionado)-> git commit -m "mensagem"
+
+git rm --cached nome do arquivo."extensao"->remove o ficheiro do estagio staged
+
+ex: git rm --cached tcc.txt

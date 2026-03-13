@@ -8,3 +8,11 @@ ex:git checkout d44955b(ou podemos usar somente os 7 primeiros digitos)
 git checkout master-> vai para o ultimo commit
 
 
+git revert-> para desfazer uma alteração de um commit
+git revert numero do commit
+ex:git revert d44955b
+
+
+git reset->remove commit
+git reset numero do commit
+ex:git reset d44955b

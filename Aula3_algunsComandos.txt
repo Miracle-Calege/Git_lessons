@@ -10,3 +10,6 @@ ex:git commit -m "Meu primeiro commit"
 
 git log->mostra os detalhes dos commits
 
+git log --oneline-> mostra os detalhes dos commits de forma mais condensada
+
+

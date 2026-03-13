@@ -1,0 +1,13 @@
+//como ignorar alguns arquivos no git
+
+1.Criar o arquivo/pasta que quer ignorar(se não existir)
+2.Criar um arquivo .gitignore(nano/touch .gitignore)
+3.Escrever o nome do arquivo de pretende ignorar dentro do .gitignore.
+
+//Exemplo
+
+1.touch password.env(o arquivo que não queremos que seja rastreado)
+2.nano .gitignore(o arquivo .gitignore)
+3.Dentro do arquivo .gitignore escreveremos password.env(usando o comando nano é mais fácil porque ele abre logo o editor)
+
+

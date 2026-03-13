@@ -3,3 +3,6 @@
 git config --global user.name "nome do usuario"->estabelecemos o nome do usuario(entre aspas)
 git config --global user.email email do usuario->estabelecemos o email do usuario
 git config --list->lista todas as nossas informacoes relacionados com git(ex:nome e email)
+git config user.name->exibe o nome do usuario
+git config user.email->exibe o email do usuario
+
