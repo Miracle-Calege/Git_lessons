@@ -7,4 +7,8 @@ ex:git checkout d44955b(ou podemos usar somente os 7 primeiros digitos)
 
 git checkout master-> vai para o ultimo commit
 
+git revert-> reverte as mudanças feitas num determinado commit criando um novo sem as alterações.
 
+git reset-> apaga todas as alterações feitas depois de um determinado commit.
+
+NB:git reset pode ser usado com options como hard, soft e etc. Os comandos acima seguem a mesma estrutura do git checkout (precisam de ID depois do comando)

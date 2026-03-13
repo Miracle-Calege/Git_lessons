@@ -1,0 +1,25 @@
+branch-> é uma espécie de workspace onde fazemos mudanças, experimentamos novas ideias sem afectar o projecto inicial/principal.
+
+git branch-> exibe a lista de branches no nosso repositório. A branch com um "*" é o nosso branch actual
+
+//Para criar um branch
+
+git branch nome(a sua escolha)
+
+ex:git branch teste
+
+//Andando entre branch
+
+git checkout nome da branch
+
+ex:git checkout teste
+
+//Para deletar um branch
+
+git branch -d nome da branch
+
+ex: git branch -d teste
+
+ex1:git branch -D teste (Usamos o "D" quando a branch tem commit que não foram merged)
+
+

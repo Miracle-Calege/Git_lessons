@@ -1,0 +1,13 @@
+merge-> juntar uma ou mais branch tornando-as uma só.
+
+
+NB:Para fundir as branches é importante que estejamos na branch de destino.
+
+git merge-> comando usado para fazer a fundição.
+
+//como usar
+
+git merge nome da branch
+
+ex:git merge mercado-pago
+ex2:git merge whatsaap
