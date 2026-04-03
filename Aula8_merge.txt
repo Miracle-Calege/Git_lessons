@@ -11,3 +11,5 @@ git merge nome da branch
 
 ex:git merge mercado-pago
 ex2:git merge whatsaap
+
+NB:Adicionamos as branch acima a branch main.
