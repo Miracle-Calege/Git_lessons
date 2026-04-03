@@ -1,0 +1,16 @@
+ //clonando um projecto
+ 
+ git clone url(tiramos o url do github)
+ 
+ ex: git clone https://github.com/jacksonpires/rails_completo_udemy_modulo3.git
+ 
+ NB:O projecto será clonado com criando uma pasta com o nome do projecto
+ 
+ 
+ git clone url nome da pasta(a nossa escolha)-> renomeia o nome da pasta do projecto
+ 
+ 
+ ex: git clone https://github.com/jacksonpires/rails_completo_udemy_modulo3.git projecto_novo
+ 
+ NB:Por defeito depois de clonarmos um projecto o repositório torna-se nosso remote origin, então não precisaremos de voltar a usar o link para instruções como git push or git clone no mesmo repositório é só uso directamente git push origin nome da branch e git clone origin.
+ 

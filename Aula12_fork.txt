@@ -1,0 +1,11 @@
+
+fork-> é uma funcionalidade do github que permite que um programador contribua num projecto alheio. Está funcionalidade copia o repositório no qual queremos trabalhar sempre fazendo referência ao autor(ex: forked from ...).
+
+NB:Essa funcionalidade só é visível quando estamos num repositório não vazio.
+
+Depois de fazermos as alterações no projecto e termos feito commit,no github vamos a aba pull request-> new pull request->create pull request. E aguardamos a veredicto(a aprovação ou reprovação) do dono do projecto.
+
+
+
+
+

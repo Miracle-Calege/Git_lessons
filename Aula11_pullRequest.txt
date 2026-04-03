@@ -1,0 +1,26 @@
+git commit -m "mensagem" --author="nome do autor"-> para que posso constar o nome do autor do commit
+
+ex: git commit -m "Alteração 1" --author="Miracle Calege"
+
+git checkout - b nome da branch-> cria a branch e vai para a a branch criada
+
+//Pull request-> é um processo de anexar as alterações de uma branch secundária a branch main
+
+1.Primeiro criamos uma branch no nosso repositório git.
+
+ex: git branch alteração.
+
+2.Fazemos um push para o repositório remoto (github).
+
+ex: git push origin alteração ->isto criará outra branch no github(teremos a branch main e a branch alteração).
+
+3.No github procuro o botão compare and pull request
+
+Está acção requesita um merge(que deve ser aprovado pelo responsáveis do projecto-gestor) 
+
+4.Ainda no github
+
+O responsável por aprovar o projecto é que vai pressionar o merge pull request(aceitar o pull request) permitindo que o branch alteração seja anexado ao branch main.
+
+5.Ainda no github
+Podemos agora apagar a branch alteração(opcional).

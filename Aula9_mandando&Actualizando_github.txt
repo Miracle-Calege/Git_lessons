@@ -1,0 +1,39 @@
+git push-> usado para mandar o conteudo do repositório git para o repositório github
+
+//como usar
+
+git push link do repo_github nome da branch
+
+ex:git push https://github.com/Miracle-Calege/mandandoGit.git main
+
+//Para evitar que tenhamos que ir ao github buscar o link do nosso repositório sempre que quisermos fazer commit usamos o git remote
+
+git remote-> cria uma alias para o nosso link
+
+//como criar um remote
+
+git remote add nome para o link link
+
+ex: git remote add origin https://github.com/Miracle-Calege/mandandoGit.git
+
+//Como usar o remote
+
+git push nome do remote branch
+
+ex: git push origin main.
+
+NB:Por convenção damos o nome de origin ao remote , mas podemos criar mais de um remote.
+
+git remote -v-> exibe os nomes dos remotes que temos.
+
+git pull-> pega actualizações de um  projecto no repositório remoto(github) e faz merge com a branch do repositório actual.
+
+//como usar 
+git pull nome do remote branch
+ex:git pull origin main
+
+
+
+
+
+
