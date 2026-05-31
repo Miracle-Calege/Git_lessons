@@ -1,0 +1,83 @@
+
+git config-> permite retornar e configurar variaveis que controlam todos os aspectos do funcionamento do git.
+
+--system->contem valores aplicados a todos usuários do sistema e seus repositórios.
+--global->contem valores aplicados ao usuário actual(tu) e seus repositórios.
+--local-> contem valores aplicados ao repositório actual.
+
+git config --list --show-origin-> retorna todas as configurações e a origem delas.
+
+
+**************************************Sua identidade********************************
+
+git config --global user.name "Seu nome"-> define o seu username
+
+ex: git config --global user.name "Miracle Calege"
+
+
+
+git config -- global user.email  email-> define o seu username
+
+ex: git config --global user.email email@gmail.com
+
+
+Essas informações são usadas em todos git commit.
+
+
+NB:Se quiser modificar as configurações feitas para projectos especificos (ex: mudar o username) é só usar o git config user.name "novo nome".Sem o "--global"
+
+
+**************************************Seu editor********************************
+
+git config --global core.editor nomeEditorTexto-> define o editor de texto que será usado quando o git precisar que digites uma mensagem.
+
+ex: git config --global core.editor "gnome-text-editor"
+
+
+
+**************************************Nome da sua branch padrao********************************
+
+NB:Por defeito o git cria uma branch de nome master.
+
+
+git config --global init.nomePorDefeito novoNome-> muda o nome da branch por defeito para um outro nome.Sempre que criarmos um novo repositório usando git init, a branch padrão terá o novo nome e não o master.
+
+ex: git config --global init.master main-> agora a branch chama-se main.
+
+
+
+**************************************Verificando configurações********************************
+
+git config --list -> lista todas as configurações do git
+
+
+git  config <key>-> lista a configuração desse elemento/key
+
+ex: git config user.name
+
+
+git config --show-origin <key>-> retorna a origem da key
+
+ex: git config --show-origin user.email
+
+**************************************Recebendo ajuda********************************
+
+Existem 3 maneiras equivalentes de ter acesso ao manual do git(manPage):
+
+git help <verb>
+
+ex: git help config
+
+git <verb> --help
+
+ex: git config --help
+
+man git-<verb>
+
+ex: man git-config
+
+
+NB:verb é a palavra ou acção que colocamos logo após o git.Podemos substituir o help por -h.
+ex: git -h config
+
+

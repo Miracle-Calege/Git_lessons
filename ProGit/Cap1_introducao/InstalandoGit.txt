@@ -1,0 +1,14 @@
+
+Instalando no Linux
+
+****************************RPM-based distribution********************
+sudo dnf install git-all
+
+****************************Debian-based distribution********************
+sudo apt install git-all
+
+
+
+Verificando a versão do git:
+
+git --version
