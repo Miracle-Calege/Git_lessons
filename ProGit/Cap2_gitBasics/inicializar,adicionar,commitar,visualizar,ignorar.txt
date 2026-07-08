@@ -1,0 +1,72 @@
+**************************************Inicializando um repositorio *************************
+
+
+git init-> cria um subdirectorio de nome ".git" que contem todos os ficheiros necessarios para o funcionamento do git.
+
+NB:E importante que usemos o comando acima no directorio onde queremos fazer rastrear os ficheiros.
+
+**************************************Adicionado ao estado staged *************************
+git add->é o comando responsável por colocar ficheiros no estado staged, ou seja, todas as mudanças feitas sobre o ficheiro estarão sob vigilância do git.
+
+NB:Depois de modificar o ficheiro devemos novamente usar o git add.
+
+Sintaxe: git add  nome do ficheiro/arquivo
+
+ex: git add gitBasics.txt
+
+NB: Podemos usar o comando git add com caminhos absolutos/relativos
+
+ex: git add Documents/gitLessons
+
+**************************************Fazendo o commit *************************
+git commit-> reponsável por fazer com que os dados sejam guardados de forma segura na SSD/HDD.Exibe também o nome da branch, o checksum  e a estatística do que foi adicionado/removido.
+
+Sintaxe: git commit -m "mensagem"
+
+ex: git commit -m "Primeiro commit"
+
+NB:Também podemos usar git commit, que vai abrir o editor de texto(caso tenhamos configurado).
+
+git commit -v-> abre o editor de texto exibindo o que foi mudado
+
+git commit -a-> permite adicionar no estado staged todos ficheiros que já estão rastreados(passaram pelo git add pelo menos uma vez) e commita-os evitando usar o comando git add novamente.
+
+
+
+**************************************Copiar um repositorio existente *************************
+
+git clone-> é usado para copiar um repositório já existente(Todas as versões do ficheiros contidos no directório estão inclusos).É ideal em casos que queremos contribuir num projecto alheio.
+
+Sintaxe: git clone url
+
+ex: git clone https://github.com/libgit2/libgit2
+
+No exemplo acima o directório chamar-se-á libgit2, mas se quisermos dar um nome diferente devemos fazer:
+ git clone url nome a nossa escolha
+ 
+ ex: git clone https://github.com/libgit2/libgit2 myRepo
+ 
+ 
+ **************************************Verificando o status do ficheiros *************************
+ 
+ git status->este comando retorna o nome da branch, ficheiros rastreados e não rastreados.
+ 
+ NB:O nome da branch por defeito é master, apesar do github ter mudado para main.
+ 
+ NB2:De modo a exibir o git status de forma mais compacta podemos usar com a flag s ou short.
+ 
+ ex: git status -s 
+ git status --short
+ 
+ onde ficheiros não rastreados tem ??, ficheiro na staging are tem A e modificados tem M a sua esquerda.
+ 
+  **************************************Ignorando ficheiros *************************
+
+Para fazer com que alguns ficheiros não sejam inclusos ou visíveis ao git na hora de fazer o commit devemos criar um arquivo de nome ".gitignore", dentro dele colocaremos o nome dos ficheiros que queremos que sejam ignorados.
+Invés dos nomes dos ficheiros podemos colocar glob patterns(similar as expressões regulares)
+
+NB:Só podemos ter um ficheiro .gitignore por repositório(mas também é possível ter nos subdirectórios)
+
+
+
+

@@ -1,0 +1,111 @@
+*************************Visualizando o que mudou**************************************
+
+git diff-> é usado para ver o que foi modificado no ficheiro. Usando o comando sem nenhuma flag retorna todas as mudanças feitas no ficheiro desde o último commit que ainda não estão no estado staged.
+
+git diff --staged/cached -> retorna as mudanças feitas no ficheiro que estão no estado staged.
+
+*************************Removendo ficheiros**************************************
+
+git rm-> é usado para remover ficheiro do estado staged e remove do directório actual.
+
+Sintaxe: git rm ficheiro/arquivo
+
+ex: git rm gitBasics
+
+
+git rm -f ficheiro-> para casos em que o ficheiro foi modificado ou está no estado staged.
+
+
+git rm --cached ficheiro-> usando em casos que queremos remover o ficheiro do estado staged mas queremos manter no directório.
+
+NB:Se removermos o ficheiro usando manualmente (ex: usando rm), essa acção deverá ser rastreada(colocada no estado staged por via de git add) enquanto usando git rm considera essa acção como algo a ser commitado logo. O comando também pode ser usado com glob patterns.
+
+*************************Renomeando ficheiros**************************************
+
+git mv-> é um comando usado para renomear ficheiros.
+
+Sintaxe: git mv nome_anterior novo_nome
+
+ex: git mv gitBasics Basics
+
+NB:Podemos mudar o nome do ficheiro manualmente(ex: usando o mv) só que será exaustivo , pois depois da mudança temos que eliminar o ficheiro com o nome anterior e depois adicionar o ficheiro com o novo nome ao estado staged.Enquanto o git mv faz isso tudo de uma só vez.
+
+*************************Visualizando histórico**************************************
+
+git log-> exibe o históricos dos commit dos mais recentes até os menos incluido:checksum(id do commit), autor, email do autor, data e mensagem do commit.
+
+
+git log -p(ou --patch)-> exibe as diferenças entre os commits. podemos colocar números para limitar a exibição de commit.
+
+ex: git log -p -2 -> exibe a diferença nos dois últimos commits.
+
+Algumas flags:
+--stat->coloca um sumário de informações em baixo de cada commit.
+
+--pretty->usado para formatar os outputs(tem options como:oneline, short,
+full, fuller e format).
+
+--shortstat-> exibe só as linhas de foram inseridas,adicionados,deletadas ou mudadas do comando --stat.
+
+--name-only->exibe a lista dos ficheiros modificados depois da informação do commit
+
+--name-status->mostra os ficheiros que sofreram qualquer tipo de alteração.
+
+--abbrev-commit->exibe os primeiros caracteres do checksum.
+
+--relative-date-> exibe a data relativa.(ex: 2 semanas atrás)
+
+--graph-> coloca o output em forma de grafos
+
+
+ex: git log --pretty=oneline
+
+git log --pretty=format:"%h - %an, %ar : %s"
+
+Alguns especificadores para usar com pretty=format:
+
+%H-> commit hash(id)
+%h-> commit has abreviado
+%T->árvore hash
+%t-> árvore hash abreviada
+%P-> hashes dos pais
+%p-> hashes dos pais abreviada
+%an-> nome do autor
+%ae-> email do autor
+%ad->data do autor
+%ar->data relativa do autor
+%cn-> nome do commiter
+%ce-> email do commiter
+%cd->data do commiter
+%cr-> data do commiter relativa
+%s-> assunto
+
+NB:Autor é a pessoa que criou o projecto e commiter a pessoa que contribuiu sobre o projecto.
+
+*************************Filtrando a saida**************************************
+
+Combinando git log com:
+
+-<n>-> exibe os últimos n commits.
+ex: git log -2
+
+--since,--after-> limita a exibição do commit  depois da data especificada
+ex:git log --since=2.weeks
+
+--until, --before->limita a exibição do commit antes da data especificada
+ex: git log --before="Sun May 31"
+
+--author->limita a exibição do commit ao autor especificado
+ex: git log --author "Miracle Calege"
+
+--committer->limita a exibição do commit ao commiter especificado
+ex: git log --commiter "Miracle Calege"
+
+--grep-> limita a exibição do commit que contem a string especificada.
+
+ex: git log --grep "Limpeza"
+
+-S-> exibe commit adicionando ou removendo codigo que bate com a string
+
+
+NB:Para evitar a exibição de merges commit podemos adicionar --no-merges.

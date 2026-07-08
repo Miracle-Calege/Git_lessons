@@ -1,0 +1,203 @@
+**********************************Refazendo commit*******************************
+
+se por algum acaso tenhamos feito o commit e depois percebamos que esquecemos de adicionar algo, podemos adicionar e depois usar o comando:
+
+git commit --amend-> este comando vai adicionar as mudanças no commit anterior(último feito).
+
+NB:É ideal usar este comando quando os commits ainda são locais e não foram mandados para um outro lado(repositório remoto).
+
+
+**********************************Desfazendo estado staged*******************************
+
+git reset HEAD-> é usado para tirar um ficheiro do estado staged.
+
+Sintaxe: git reset HEAD ficheiro
+
+ex: git reset HEAD gitBasics
+
+Outro comando útil para a mesma finalidade é o :
+
+git restore
+
+Sintaxe: git restore --staged ficheiro
+
+ex:git restore --staged gitBasics
+
+
+
+**********************************Desfazendo actualizações no nosso ficheiro*******************************
+
+git checkout-> é usado para fazer o ficheiro voltar a versão do último commit.
+
+Sintaxe: git checkout --ficheiro
+
+git checkout -- gitBasics
+
+Outro comando útil para a mesma finalidade é o :
+
+git restore
+
+Sintaxe: git restore ficheiro
+
+ex: git restore gitBasics
+
+
+**********************************Trabalhando em repositórios remotos*******************************
+
+Repositório remoto é aquele que está hospedado na internet ou algum lado da rede ,mas  também pode estar na nossa máquina mas num local diferente do repositório actual em que estamos trabalhando.
+
+git remote-> exibe todos os repositórios remotos. Por defeito o nome do repositório remoto que clonamos do server recebe o nome de origin.
+
+git remote -v-> retorna os nomes dos repositórios remotos e os seus respectivos URLs
+
+Para rotular url de um repositório remoto:
+
+Sintaxe:
+git remote add nome url
+
+ex: git remote add repo  https://github.com/paulboone/ticgit
+
+
+git fetch->é o comando usado para pegar do repositório remoto as actualizações que foram feitas no projecto que tu não tens(É usado depois de termos clonado o repositório).
+
+Sintaxe:
+git fetch remote/url
+
+ex: git fetch repo
+
+NB: Se quisermos pega e fazer merge da branch do repositório remoto com a nossa branch actual podemos usar o comando git pull.
+
+git push-> é o comando usado para mandar os ficheiros do nosso repositório local para o servidor.
+
+Sintaxe: git push nomeRemoto branch
+
+ex: git push origin master
+
+
+git remote show-> exibe as informações acerca do repositório.
+
+Sintaxe: git remote show remoto/url
+
+ex: git remote show origin
+
+
+git remote rename-> comando usado para renomear um remoto
+
+Sintaxe: git remote rename nomeAnterior nomeNovo
+
+ex: git remote repo repoNovo
+
+
+git remote remove-> comando usado para remover um remoto
+
+Sintaxe: git remote remove remote
+
+ex: git remote remove repoNovo
+
+
+**************************************Trabalhando com tags************************************
+
+
+tag-> é um rotulo para o commits, facilitando a sua localização.
+
+git tag-> é o comando responsável por exibir todas as tag existentes.
+
+
+git tag -l/--list-> é usado para localizar tag específicas usando wildcard ou patterns.
+
+ex: git tag -l "v1.8.5*"-> localiza todas as tag com esse padrão.
+
+
+Existem 2 tipos de tags: 
+
+Lightweight->é uma tag que se assemelha a uma branch que não pode mudar, um ponteiro para um commit específico.
+
+Annotated-> são aquelas armazenadas como objectos na base de dados git, contendo nome e email do tagger e data.
+
+git tag -a-> cria uma annotated tag.
+
+Sintaxe: git tag -a nomeTag -m "msg"
+
+ex: git tag -a v1.4 -m "versao 1.4"-> criamos uma tag de nome v1.4 com a mensagem versão 1.4
+NB:se não usarmos a flag -m para a mensagem o git vai abrir o editor de texto.
+
+
+git show-> exibe as informações associadas ao tag
+
+Sintaxe: git show tag
+
+ex: git show v1.4
+
+git tag-> também pode ser usado para criar uma tag do tipo lightweight.
+
+NB:Também podemos criar tag usando checksum
+ex: git tag -a v1.2 9fceb02-> criamos uma annotated tag de nome v1.2 para o commit 9fceb02
+
+
+git push não transfere por defeito tag para o servidor remoto, por isso, devemos fazê-lo da seguinte maneira:
+
+Sintaxe:
+git push branch nomeTag
+
+ex: git push origin v1.4
+ou
+git push origin --tags-> para mandar todas para o remoto(só as tags que não estiverem lá).
+ou
+git push origin --follow-tag-> para mandar só annotated tags
+
+git tag -d-> deleta uma tag
+
+Sintaxe: git tag -d nomeTag
+
+ex:git tag -d v1.4-lw
+
+Para apagar tag do servidor remoto procedemos de 2 formas:
+
+Sintaxe:
+git push remote :refs/tags/tagname
+
+ex: git push origin :refs/tags/v1.4-lw
+
+ou 
+
+Sintaxe:git push origin --delete tagname
+
+ex: git push origin --delete v1.4-lw
+
+
+git checkout-> é usado para ver a versão  para a qual o tag está a apontar.
+
+Sintaxe:
+git checkout tag
+
+ex: git checkout v2.0.0
+
+NB:Se quisermos fazer nessa tag é aconselhável que crie-se outra branch da seguinte maneira:git checkout -b version2 v2.0.0
+
+
+**************************************Criando aliases************************************
+
+Aliases-> é o acto que renomear um comando para um nome que nos é mais sugestivo.
+
+Para criar alias devemos usar git config
+
+Sintaxe:
+
+git config --global/system/local alias.nomeSugestivo comando
+
+ex:git config --global alias.co checkout
+git config --global alias.br branch
+ git config --global alias.ci commit
+ git config --global alias.st status
+ 
+ NB: Agora por exemplo se quisermos fazer um commit faremos da seguinte maneira:
+ git ci -m"msg"
+ 
+ 
+ NB:Para usar comandos externos:
+ 
+ Sintaxe: git config --global/system/local alias.nomeSugestivo '!comando externo'
+
+ex: git config --global alias.visual '!gitk'
+
+ou seja, quando corrermos o comando git visual o gitk será executado
