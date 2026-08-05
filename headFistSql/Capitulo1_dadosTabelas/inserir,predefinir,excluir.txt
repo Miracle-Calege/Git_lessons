@@ -1,0 +1,69 @@
+*******************************Inserindo dados na tabela**********************************
+
+Sintaxe:
+
+INSERT INTO nomeTabela (nomeColuna1,nomeColuna2,nomeColunaN) VALUES(valor1,valor2,valorN)
+
+
+NB:"INSERT INTO" inicia o comando, o primeiro par de parênteses colocamos os nomes das colunas, "VALUES" indica que os valores para as colunas mencionadas, o segunda par de parênteses colocamos os valores. É importante que os valores sigam a mesma ordem das colunas(no primeiro par de parênteses).
+
+Usamo ' '(aspas simples) sempre que quisermos inserir textos, caracteres e datas.
+
+
+ex: INSERT INTO contactos
+
+(apelido,nome,email,genero,data_Nascimento,profissao,localizacao,estado,interesses,procura)
+VALUES
+
+('ANDERSON','Jillian','jill_anderson@breakneckpizza.net','F','1980-09-05','Technical Writer','Palo Alto,CA', 'Solteiro','Kayaking,Reptiles','Relacionamento,Amigos')
+
+
+*******************************Variaçoes no INSERT**********************************
+
+1.Mudar a ordem das colunas: desde que a ordem do preenchimento dos valores siga a ordem das colunas.
+
+ex:(interesses,nome,apelido,genero,email,data_Nascimento,profissao,localizacao,estado,procura)
+VALUES
+('Kayaking,Reptiles','Jillian','Anderson','F','jill_anderson@breakneckpizza.net','1980-09-05',Technical Writer','Palo Alto,CA','Relacionamento,Amigos')
+
+2.Omitir os nomes da coluna:Nao precisamos de especificar as colunas desde que a inserçao dos valores corresponda a todas as colunas na mesma ordem que as mesmas estao dispostas na tabela.
+
+ex: INSERT INTO contactos
+VALUES
+('ANDERSON','Jillian','jill_anderson@breakneckpizza.net','F','1980-09-05','Technical Writer','Palo Alto,CA', 'Solteiro','Kayaking,Reptiles','Relacionamento,Amigos')
+
+
+
+3.Podemos deixar algumas colunas de fora:Podemos inserir dados em colunas especificas.
+
+ex: INSERT INTO contactos
+(apelido,nome,email)
+VALUES
+('ANDERSON','Jillian','jill_anderson@breakneckpizza.net')
+
+NB:Neste caso como nem todas as colunas tem valores, as colunas sem valores serao automaticamente inicalizadas por NULL.
+
+
+
+*******************************NOT NULL**********************************
+
+De modo a garantir que certos campos tenham sempre valores(nao sejam NULL) usamos o "NOT NULL" depois do tipo de dado na criaçao da tabela.
+
+ex: CREATE TABLE contactos(
+
+apelido VARCHAR(30) NOT NULL,
+nome VARCHAR(20) NOT NULL);
+
+
+*******************************DEFAULT**********************************
+
+DEFAULT-> é usado para predefinirmos valores numa certa coluna caso este nao seja mudado, ou seja, sempre que criamos a tabela a coluna com esse parâmetro terá esse valor caso ele nao seja mudado.
+Colocamos o DEFAULT depois do tipo de dado na criaçao da tabela.
+
+ex: CREATE TABLE lista_doughnut(
+nome_doughnut VARCHAR(10) NOT, 
+tipo_doughnut VARCHAR(8) NOT NULL,
+custo_doughnut DEC(3,2) NOT NULL DEFAULT 1.00
+);
+
+NB:Assim que a tabela for criada e se inserir um registo sem se especifica o valor na coluna "custo)doughnut" o valor será 1.00.

@@ -1,0 +1,57 @@
+*********************Listando branches********************************************
+
+git branch(sem argumentos)-> lista as suas branches actuais.
+
+NB:O "*" antes do nome da branch indica que o HEAD está a apontar para essa branch actualmente.
+
+git branch --all->lista todas branches
+**************************Visualizando o último commit de cada branch*******************
+
+git branch -v-> lista o último commit de cada branch.
+
+Podemos usar git branch com os argumentos :--merged(para ver as branches que já foram fundidas) e --no-merged(para ver as que nao foram fundidas).
+
+NB:Podemos usar os argumentos merged no merged sem precisar estar na branch que queremos saber acerca e só colocar o nome da branch depois dos argumentos.
+
+Sintaxe: git branch --merged/--no-merged nomeBranch
+
+ex: git branch --no-merged master
+
+
+
+**************************Mudando o nome da branch***************************
+
+NB:Nao renomeies branches que ainda estao a ser usadas por outros colaboradores.
+
+
+Sintaxe: git branch --move nomeAnterior nomeNovo
+
+ex: git branch --move master main 
+
+NB:Agora a branch que se chamava master agora se chama main.Mas essa mudança de nome será local.
+
+Para que a mudança também recaia sobre o servidor remoto:
+
+Sintaxe:git push --set-upstream nomeRemoto  novoNome
+
+ex: git push --set-upstream origin mainLine
+
+Sintaxe:git push origin --delete nomeAnterior
+
+ex:git push origin --delete master
+
+NB:Usamos este último comando pois se nao usássemmos a branch master ainda estaria na nossa lista de branches.
+
+
+**************************Visualizando branches remotas***************************
+
+git ls-remote->retorna uma lista de referencias remotas(tags,branches,etc)
+
+
+Sintaxe: git ls-remote nomeRemoto
+
+ex: git ls-remote origin
+
+git remote show->retorna as branches remotas e as suas informaçoes.
+
+ex: git remote show origin

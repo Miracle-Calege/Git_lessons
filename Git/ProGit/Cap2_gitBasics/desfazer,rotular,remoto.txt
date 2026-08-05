@@ -73,6 +73,16 @@ Sintaxe: git push nomeRemoto branch
 
 ex: git push origin master
 
+NB:se quisermos que a branch tenha outro nome no repositório remoto:
+
+Sintaxe:
+
+git push origin nomeBranchLocal:nomeBranchRemote
+
+ex: git push origin master:mastery
+
+NB:Mandamos a nossa branch master para o nosso repositório remoto e lá a branch vai se chamar mastery.
+
 
 git remote show-> exibe as informações acerca do repositório.
 

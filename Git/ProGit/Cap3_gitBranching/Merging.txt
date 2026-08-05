@@ -1,0 +1,78 @@
+Merging-> é o processo de fundir uma branch com a outra(Geralmente fundimos a branch principal/master com a branch alternativa).
+
+********************************Fundindo branches*******************************
+Caso1:
+Supondo que criamos uma nova branch de nome teste (que apontara para o ultimo commit que fizemos na branch master)  fizemos algumas modificacoes, acrescentamos features e etc.Satisfeitos com o que fizemos na branch teste queremos anexar as mudanças a nossa branch principal/master.
+
+1.Devemos ir a branch master/outra branch que queremos adicionar alteraçoes(git checkout master)
+
+2.Usamos o comando para fundir branches
+
+
+Sintaxe: git merge branchAserfundida
+
+ex: git merge teste
+
+NB:Agora o ponteiro da branch master esta a apontar para o conteudo da branch teste(agora o ultimo commit da branch master e o commit da branch teste).Agora temos 2 branches apontando para o mesmo commit(master e teste).
+
+Neste caso já podemos apagar a branch teste porque o seu conteúdo já foi anexado a branch master.
+
+NB:Pelo facto do commit da branch teste ter como antecessor directo o último commit da branch master será chamada de "fast-forward" porque o a branch master só teve de mover o seu ponteiro para o commit da branch teste.
+
+
+Caso2:
+Supondo que eu criei uma branch teste e outra teste2(as duas apontam para o último commit do master), depois fundo a branch teste a branch master e apago a branch teste.
+Neste caso a branch teste2 só terá acesso ao último commit antes da fundiçao.
+
+Abordagem1:
+Para ter acesso ao commit depois da fundiçao podemos fazer:
+
+Estando na branch teste2: git merge master-> aqui a branch teste2 terá acesso ao último commit feita no master+ as alteraçoes já contidas no teste2, mas a branch master nao terá as alteraçoes contidas no teste2
+
+Abordagem2:
+
+Após estarmos satisfeitos com as alteraçoes feitas teste2 faremos:
+
+Estando na branch master: git merge teste2
+
+Pelo facto do teste2 estar a apontar para o último commit da master antes da fundiçao a merge será "recursive strategy" porque último commit actual da master nao é o ancestral directo do teste2(teste2 nao está a apontar para esse commit).
+
+Neste abordagem o git vai criar um snapshot/commit especial onde o master estará a apontar actualmente que terá como ancestrais o último commit master(aquele que surgiu da fundiçao)+ as alteraçoes contidas no teste2.
+
+
+
+********************************Conflictos ao fundir*******************************
+
+NB:Se alterarmos a mesma parte de um ficheiro de forma diferente em 2 branches que  estamos a tentar fundir haverá conflicto.Com uma mensagem parecida com esta:
+CONFLICT (content): Merge conflict in nomeFicheiro
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+NB:Git adiciona marcadores nos ficheiros que geraram conflictos.
+
+ex:
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
+
+No exemplo acima na branch onde queremos fundir(HEAD) o ficheiro index.htlm tem um div disposto de um formato diferente do div diposto na branch iss53.
+
+NB:Esse marcadores foram adicionados pelo git no ficheiro index.html
+
+Solucao:Mudar o ficheiro para que vá de acordo com a disposiçao que queremos.
+
+ex:
+<div id="footer">
+please contact us at email.support@github.com
+</div>
+
+NB:Assim já teremos resolvido o conflicto.Depois usamos o comando git add e git commit para finalizar a fundiçao.
+
+NB:Quando usamos git commit sem mensagem depois da resolucao de um conflicto a mensagem por defeito será:Merge branch "nomeBranch"
+
+
+ 

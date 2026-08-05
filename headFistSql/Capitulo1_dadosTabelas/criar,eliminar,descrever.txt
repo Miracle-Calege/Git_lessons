@@ -1,0 +1,111 @@
+Base de dados(database)-> é um container/repositório que guarda tabelas e outras estruturas sql relacionadas a essas tabelas.
+
+NB:Em diagramas a base de dados é exibida em forma de cilindro. A informaçao na base de dados é organizada em tabelas. Geralmente o nome da base de dados e da tabela nao estao em letra maiúsculas.
+
+Tabela-> é uma estrutura dentro da base de dados que contem dados organizados em colunas e linhas.
+
+Coluna/Campo-> representa a categoria.
+
+Linha/registo->é onde fica toda informaçao de um objecto na tabela.
+
+
+
+**************************Criando uma base de dados*************************************
+
+Sintaxe: 
+
+CREATE DATABASE nome;
+
+ex: CREATE DATABASE lista_telefonica;
+
+NB:Criamos uma base de dados com o nome lista_telefonica(nao sao permitidos espacos nos nomes da base de dados ou tabelas por isso optamos por usar underscore).
+
+
+**************************Acessar a base de dados*************************************
+
+Sintaxe:
+
+USE nome;
+
+ex: USE lista_telefonica;
+
+NB: Este comando permite nos trabalhar na base de dados selecionada.
+
+
+***********************************Observaçoes*******************************************
+
+Nao é obrigatório que os comandos sejam escritos em letras maiúsculas, porém é uma boa práctica.
+
+É boa práctica usar nomes descritivos para nomear base de dados e tabelas evitando escrevê-los com letras maiúsculas.
+
+Devemos colocar ";" no final do comando, isso indica que o comando terminou.
+
+
+**************************Criando uma tabela*************************************
+
+Sintaxe:
+
+CREATE TABLE nome (
+
+nomeColuna1 tipo dado,
+nomeColuna2 tipo dado,
+nomeColunaN tipo dado
+
+);
+
+
+ex: CREATE TABLE doughnut_list(
+
+ nome_doughnut VARCHAR(10),
+ 
+ tipo_doughnut VARCHAR(8)
+ );
+ 
+ 
+ NB:"(" parênteses de abertura para a lista de colunas, nome_doughnut nome da primeira coluna, "," separa as colunas a serem criadas, VARCHAR(8)==variable character é um tipo de dado para textos onde o "8" é o tamanho máximo de caracteres aceites e ")" o parênteses de fechamento da lista das colunas.
+ 
+ 
+ **************************Tipos de dados********************************************
+ 
+ CHAR ou CHARACTER-> lida com caracteres e o seu comprimento deve ser especificado.
+ 
+ INT ou INTEGER->lida com números inteiros.
+
+ DEC-> coloca casas decimais nos números.DEC(comprimento max,numero de casas decimais).
+ 
+ DATETIME/TIMESTAMP(depende do SGBD)->lida com a data e hora.
+ 
+ NB:TIMESTAMP ideal para datas actuais e DATETIME ideal para datas futuras.
+ 
+ TIME-> lida com a hora.
+ 
+ VARCHAR-> lida com texto com até 255 caracteres.
+ 
+ 
+ DATE->lida com a data.
+ 
+ BLOB->lida com grandes quantidades de dados textuais.
+ 
+ NB:Estes tipos de dados nao sao universais para todos SGBD.
+ 
+ 
+ **************************Verificando as configuraçoes da tabela********************************************
+ 
+ Sintaxe:
+ 
+ DESC nome;
+ 
+ ex: DESC lista_telefonica;
+ 
+ NB:DESC é o diminuitivo de DESCRIBE.
+ 
+ 
+ **************************Eliminando a tabela********************************************
+ 
+ Sintaxe:
+ 
+ DROP TABLE nome;
+ 
+ ex: DROP TABLE lista_telefonica;
+ 
+ NB:Este comando deleta a tabela e os seus dados.

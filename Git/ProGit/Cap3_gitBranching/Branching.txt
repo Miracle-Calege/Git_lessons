@@ -1,0 +1,63 @@
+Branching-> é o processo de criar uma nova linha de desenvolvimento sem mexer ou alterar com a linha/projecto principal.Basicamente branch e uma especie de um ponteiro para um commit.O nome por defeito de uma branch é master.
+
+***********************************Criando uma branch*******************************
+
+Sintaxe: git branch nome
+
+ex: git branch teste
+
+NB:Criamos uma branch de nome teste. Existe um ponteiro especial chamado HEAD que determina em que branch estamos.O comando acima só nos permitiu criar a branch mas ainda estamos na nossa branch padrao(master).
+
+NB:Quando criamos uma branch, o ponteiro da nova branch aponta para o estado actual do ultimo commit da branch master e a partir desse ultimo estado ou commit começamos a fazer as nossas alteraçoes na nossa branch nova. Se quisermos voltar ao estado anterior antes da criacao da nova branch e so recuar para a branch master.
+
+
+***********************************Mudando de branch*******************************
+Sintaxe: git checkout branch
+
+ex: git checkout teste
+
+NB:Agora HEAD esta apontando para a branch teste, ou seja, teste é nossa branch actual agora
+
+Sintaxe: git checkout -b nome ->cria uma nova branch e poe o HEAD a apontar para ela
+
+ex: git checkout -b teste
+
+NB:Criamos uma branch de nome teste e estamos nela actualmente
+
+
+NB:Nas novas versoes do git e possivel mudar de branch usando o comando:
+
+Sintaxe: git switch nome
+
+ex: git switch teste
+
+
+Para criar uma noma branch e colocar o HEAD a apontar para ela:
+
+Sintaxe: git switch -c/--create nome
+
+ex: git switch -c teste
+
+
+NB:Para retorna a branch anterior: git switch -
+
+
+***********************************Apagando uma branch*******************************
+
+Sintaxe: git branch -d nome
+
+ex: git branch -d teste
+
+NB: Agora a branch teste já nao existe.Essa comando nao irá funcionar se a branch ainda nao tiver sido fundida.Se quisermos forçar a podemos usar -D.
+
+
+***********************************Visualizando os commits nas branches*******************************
+
+Sintaxe: git log nome
+
+ex: git log teste
+
+git log --all-> exibe o historico de commit de todas as branches
+
+git log --oneline --decorate-> permite visualizar em que branch estamos.HEAD->branch a seta indica a nossa branch actual
+
