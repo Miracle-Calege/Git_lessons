@@ -1,0 +1,221 @@
+SELECT-> é usado para retornar os dados na tabela.
+
+
+************************Retornando dados********************************
+
+Sintaxe:
+
+SELECT* FROM tabela;
+
+
+ex: SELECT*FROM contactos;
+
+
+NB: O "*" retorna todas as colunas na tabela.Chama-se star(estrela).
+
+
+************************Retornando dados específicos********************************
+
+Sintaxe:
+
+SELECT*FROM tabela WHERE coluna operador valor;
+
+ex: SELECT*FROM contactos WHERE nome='Anne';
+
+NB:"WHERE" diz ao SGBD que estamos a procurar algo específico, "coluna" se refere aonde a coisa específica será procurada, "= valor" o valor específicado que estamos a procura.
+
+ou seja, a query vai retornar todos os dados cujo a coluna nome tem o valor 'Anne'.
+
+Operador pode ser: "=,>,<,<>(diferente),<=,>=";
+
+
+NB: Se tivermos dados com apostrofe na tabela devemos usar o escaping para o retorno dos mesmos.
+
+ex:SELECT*FROM contactos WHERE localizacao='Grover\'s Mill';
+
+Seria válido usar dupla apostrofe.
+
+************************Retornando dados em colunas específicas********************************
+
+Sintaxe:
+
+SELECT coluna1,coluna2,colunaN FROM tabela;
+
+NB:Inves de colocar "*" colocamos somente as colunas que queremos visualizar, esta práctica é mais eficiente que usar "*".
+
+ex: SELECT drink_name, main, second
+FROM easy_drinks;
+
+************************Retornando dados específicos em colunas específicas********************************
+
+
+Sintaxe:
+
+SELECT coluna1,coluna2,colunaN FROM tabela WHERE coluna operador valor;
+
+
+ex: SELECT drink_name, main, second
+FROM easy_drinks
+WHERE main = 'soda';
+
+NB: A query vai retornar todos os dados nas colunas selecionadas cujo o main seja igual a 'soda'.
+
+
+
+**********************Retornando dados duas ou mais condiçoes***************
+
+Sintaxe:
+
+SELECT colunas From WHERE coluna1 operador valor1 AND/OR coluna2 operador valor;
+
+NB:Usamos "AND" quando todas as condiçoes devem ser verdadeiras e "or" quando somente uma das condiçoes precisa ser verdadeira.Nao existe restricçoes acerca da quantidade de "AND" e "Or" que podem ser usado e ambos podem ser usados simultaneamente.
+
+ex:SELECT location
+FROM doughnut_ratings
+WHERE type = 'plain glazed'
+AND
+rating = 10;
+
+NB: A query retornará localizaçao onde a coluna type for "plain glazed" e rating=10.
+
+
+ex2:SELECT cost FROM drink_info
+WHERE ice = 'Y'
+AND
+color = 'yellow'
+AND
+calories > 33;
+
+ex3:SELECT type FROM doughnut_ratings WHERE location = 'Krispy King' OR rating = 3;
+
+NB:A query vai retornar o tipo onde a localizaçao for 'krispy king' ou a classificaçao for 3.
+
+
+**********************Usando operadores de comparacao com textos***************
+
+SELECT drink_name
+FROM drink_info
+WHERE
+drink_name >= 'L'
+AND
+drink_name < 'M';
+
+NB: A query retorna os drinks cujo os nomes comecem dos "L" ou letras que venham depois dela e drinks cujo os nomes comecem por letras que venham antes de "M".
+
+
+**************************IS NULL************************************
+De modo a selecionar o as colunas cujo os seus valores sao null usamos a keyword "IS NULL".
+
+Sintaxe:
+
+SELECT colunas FROM tabela WHERE coluna IS NULL; 
+
+ex:SELECT drink_name
+FROM drink_info
+WHERE
+calories IS NULL;
+
+NB: Usar calories=NULL nao funcionará.
+
+
+*******************************LIKE***********************************
+
+Sintaxe:
+
+SELECT colunas tabela WHERE coluna LIKE 'wildcardsequencia';
+
+ex:SELECT * FROM my_contacts
+WHERE location LIKE '%CA';
+
+ex2:SELECT first_name FROM my_contacts
+WHERE first_name LIKE '_im';
+
+NB:O "%" diz ao SGBD para procurar todos os valores na coluna location que terminem por CA."_"diz para o SGBD procurar todos os valores na coluna nome com apenas um caracter antes do "im".Wildacard sao caracteres que colocamos para serem usados na busca de dados(%,_).
+
+%-> vários caracteres.
+_-> um caracter.
+
+NB: Os wildcards podem estar antes ou depois da sequência e também podem ser combinados.
+
+ex: ...WHERE word LIKE '_i%';-> o "i" antecedido por um caracter e precedido por vários caracteres.  
+
+ex2:..WHERE word LIKE 'Spl%';-> antecido por Spl.
+
+*******************************BETWEEN***********************************
+
+BETWEEN-> é útil para casos em que queremos valores em um determinado intervalo fechado.
+
+
+ex:SELECT drink_name FROM drink_info
+WHERE
+calories >= 30
+AND
+calories <= 60;
+
+Inves de optarmos pelo exemplo acima poderíamos fazer:
+
+Sintaxe: SELECT colunas FROM tabela WHERE coluna BETWEEN valor1 AND valor2;
+
+ex:SELECT drink_name FROM drink_info
+WHERE
+calories BETWEEN 30 AND 60;
+
+ex2:SELECT drink_name FROM drink_info
+WHERE
+drink_name BETWEEN 'G' AND 'P';
+
+NB: A ordem importa, devemos sempre escrever o menor valor e depois o maior valor.(Nao 60 AND 30).
+
+
+*******************************************IN********************************
+
+IN-> é uma alternativa para o uso de vários "OR's".
+
+
+NB:Inves de optarmos por fazer:
+
+ex:SELECT date_name
+FROM black_book
+WHERE
+rating = 'innovative'
+OR
+rating = 'fabulous'
+OR
+… ;
+
+
+Fazemos:
+
+Sintaxe:
+
+SELECT colunas FROM WHERE coluna IN (valor1,valor2,valorN);
+
+ex: SELECT date_name FROM black_book
+WHERE
+rating IN ('innovative', 'fabulous',
+'delightful', 'pretty good');
+
+
+NB:Retorna os dados da coluna date_name onde a coluna rating tiver um dos valores entre parênteses. Para ter o contrário do resultado podemos colocar "NOT" antes do IN, assim retornará os dados onde a coluna rating nao tiver m dos valores entre parênteses.
+
+ex2: SELECT date_name FROM black_book
+WHERE
+rating NOT IN ('innovative', 'fabulous',
+'delightful', 'pretty good');
+
+
+
+*******************************************NOT********************************
+
+Podemos usar o "NOT" com BETWEEN e LIKE,considerando que o not sempre logo depois do WHERE.
+
+
+ex:SELECT drink_name FROM drink_info
+WHERE NOT carbs BETWEEN 3 AND 5;
+
+ex2:SELECT date_name from black_book
+WHERE NOT date_name LIKE 'A%'
+AND NOT date_name LIKE 'B%';
+
+
+NB:Mesmo usando o "IN" podemos colocar o NOT logo depois do WHERE.

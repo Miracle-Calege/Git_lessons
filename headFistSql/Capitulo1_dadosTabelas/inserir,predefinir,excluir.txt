@@ -44,6 +44,38 @@ VALUES
 NB:Neste caso como nem todas as colunas tem valores, as colunas sem valores serao automaticamente inicalizadas por NULL.
 
 
+*******************************Colocando apostrofe nos textos**********************************
+
+
+NB: Supondo que queiramos inserir um palavra,texto com apostrofe numa coluna.
+ex:
+INSERT INTO contactos
+(localizaçao)
+VALUES
+('Grover's Mill');
+
+O query acima vai dar um erro, pois quando colocamos um apostrofe o SGBD espera receber um texto e outro apostrofe de fechamento do mesmo jeito que acontece quando inserimos textos na tabela.
+
+O jeito certo seria:
+
+1.Colocar um "\" antes do apostrofe.
+
+ex:INSERT INTO contactos
+(localizaçao)
+VALUES
+('Grover\'s Mill');
+
+2.Colocar dois apostrofes seguidos
+ex:INSERT INTO contactos
+(localizaçao)
+VALUES
+('Grover\''s Mill');
+
+Estes métodos sao  chamados de escaping.
+
+
+
+
 
 *******************************NOT NULL**********************************
 
