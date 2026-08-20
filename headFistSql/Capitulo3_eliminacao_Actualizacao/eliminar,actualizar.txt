@@ -1,0 +1,68 @@
+**********************************Eliminando*********************************************
+
+DELETE-> é usado para eliminar linhas de dados.Geralmente é usado com o "WHERE".
+
+Sintaxe:
+
+DELETE FROM tabela WHERE coluna operador valor;
+
+
+ex: DELETE FROM clown_info WHERE activities='dancing';
+
+Todas as linhas cujo a coluna activities tem o valor 'dancing' serao eliminadas.
+
+NB:Se nao usassemos WHERE todas as linhas seriam eliminadas(ex:DELETE FROM clown_info;). 
+
+
+ex2:DELETE FROM doughnut_ratings WHERE location  = 'Krispy King' AND  rating <> 6;
+
+ex3:DELETE FROM doughnut_ratings WHERE location  = 'Krispy King' OR  rating > 5;
+
+**************************Alguns pontos a considerar no uso do DELETE************************
+
+
+1.Nao podemos usar DELETE para deletar o valor de uma única coluna ou todas as colunas da tabela.
+
+2.Podemos usar o DELETE para deletar uma ou mais linhas dependendo do emprego do WHERE.
+
+3. Podemos usar DELETE com LIKE,IN,BETWEEN,AND, OR, etc.
+
+NB:Basicamente usamos o comando DELETE do mesmo jeito que usamos SELECT.
+
+**********************************Actualizando*********************************************
+
+UPDATE-> é o comando usado para actualizar dados nas linhas.
+
+Sintaxe:
+
+
+UPDATE tabela SET coluna="valor" WHERE coluna operador valor;
+
+ex:UPDATE doughnut_ratings
+SET
+type = 'glazed'
+WHERE type = 'plain glazed';
+
+
+
+ex2:UPDATE drink_info
+SET cost = cost + 1
+WHERE
+drink_name='Blue Moon'
+OR
+drink_name='Oh My Gosh'
+OR
+drink_name= 'Lime Fizz';
+
+NB:No exemplo acima estamos a incrementar o valor do custo onde o nome do drink corresponde ao proposto.Podemos fazer qualquer operaçao aritmética em colunas cujos os dados sao numéricos.
+
+**************************Alguns pontos a considerar no uso do UPDATE************************
+1.Podemos mudar valor de uma ou mais colunas colando mais pares de coluna e valores depois do SET.
+
+ex:UPDATE your_table
+SET first_column = 'newvalue',
+second_column = 'another_value';
+
+NB:Como nao há WHERE todas as linhas dessas colunas ganharao esses valores respectivamente.
+Só podemos ter um SET, como está ilustrado no exemplo acima(depois do set podemos ter mais de um par de coluna=valor).
+
