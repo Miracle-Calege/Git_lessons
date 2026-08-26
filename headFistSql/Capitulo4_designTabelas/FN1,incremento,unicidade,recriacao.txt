@@ -1,0 +1,118 @@
+Normalizaçao-> é o processo de organizaçao das tabelas de forma a ter query mais eficientes que facilitarao na busca por dados nas tabelas.
+
+*********************************Primeira forma normal 1FN************************************
+
+1.Cada coluna deve ter valores atómicos.
+
+2.Cada linha deve ter um identificador único, conhecido como Primary key para evitar dados duplicados.
+
+
+***********************************Regras do primary key**************************************
+
+Primary key-> é uma coluna na tabela que garante que os registos sejam únicos, identifica unicamente cada registo.
+
+1.Primary key nao pode ser NULL
+
+2.Primary key só deve conter a informaçao que precisa para ser única.
+
+3.Os valores da Primary key nao podem ser mudados.
+
+
+***********************************Comando SHOW**************************************
+
+Sintaxe:
+
+SHOW CREATE TABLE tabela;
+
+ex: SHOW CREATE TABLE my_contacts;
+
+NB:Este comando mostrará exactamente o código usado para gerar a tabela my_contacts.O output pode ser usado do jeito que está para criar uma nova tabela.
+
+SHOW COLUMNS FROM tabela;-> exibe todas as colunas das tabelas e seus tipos de dados
+
+SHOW CREATE DATABASE nome;->retorna o comando para recriar a tabela
+
+SHOW INDEX FROM tabela;->retornar as colunas indexadas e tipo de index
+
+SHOW WARNINGS;->retorna os avisos
+
+
+***********************************Criando uma tabela com primary key**************************************
+
+Sintaxe:
+
+CREATE TABLE nome(
+coluna1 tipo dado;
+.
+.
+.
+colunaN tipo dado;
+
+PRIMARY KEY(coluna)
+);
+
+NB:A coluna que estamos a adicionar a primary key deve ter um mecanismo que nao permita valores NULL.
+
+
+ex:CREATE TABLE my_contacts
+(
+   contact_id INT NOT NULL,
+   last_name varchar(30) default NULL,
+   first_name varchar(20) default NULL,
+   email varchar(50) default NULL,
+   gender char(1) default NULL,
+    birthday date default NULL,
+   profession varchar(50) default NULL,
+   location varchar(50) default NULL,
+   status varchar(20) default NULL,
+   interests varchar(100) default NULL,
+   seeking varchar(100) default NULL,
+   PRIMARY KEY (contact_id)
+);
+
+************************************Curiosidade***********************************************
+
+Podemos criar uma coluna usando palavras/comandos reservadas SQL, desde que os coloquemos entre ''.
+
+ex:`select` varchar(50)
+
+NB:Embora seja possível nao é aconselhável o fazer.
+
+
+************************************AUTO_INCREMENT***********************************************
+
+AUTO_INCREMENT->é usado para incrementar um valor, por defeito começa por 1 e incrementa uma unidade a cada registo.
+
+Sintaxe:
+
+CREATE TABLE nome(
+coluna1 tipo dado AUTO_INCREMENT,
+.
+.
+.
+colunaN tipo dado
+);
+
+
+ex:CREATE TABLE my_contacts
+(
+   contact_id INT NOT NULL AUTO_INCREMENT,
+   last_name varchar(30) default NULL,
+   first_name varchar(20) default NULL,
+   email varchar(50) default NULL,
+   gender char(1) default NULL,
+    birthday date default NULL,
+   profession varchar(50) default NULL,
+   location varchar(50) default NULL,
+   status varchar(20) default NULL,
+   interests varchar(100) default NULL,
+   seeking varchar(100) default NULL,
+   PRIMARY KEY (contact_id)
+);
+
+************************************Adicionando PRIMARY KEY a uma tabela existente***********************************************
+
+
+ex: ALTER TABLE my_contacts ADD COLUMN contact_id INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY(contact_id);
+
+NB:FIRST coloca a coluna como a primeira na tabela.
