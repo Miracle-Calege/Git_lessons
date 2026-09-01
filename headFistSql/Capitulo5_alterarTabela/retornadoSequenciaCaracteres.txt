@@ -1,0 +1,60 @@
+RIGHT()/LEFT()-> sao usadas para retornar uma quantidade especifica de caracteres da direita/esquerda.
+
+SINTAXE:
+
+SELECT RIGHT(coluna,quantidadeCaracteres) FROM tabela;
+
+ex:SELECT RIGHT(location, 2) FROM cliente;
+
+NB:Vai retornar os 2 primeiros caracteres que encontro a direita.Poderíamos usar o LEFT no lugar do RIGHT e o efeito seria similar mas encontrando a esquerda.
+
+
+***********************Para retornar uma determinada sequência a partir de um ponto específico*********
+
+SUBSTRING_INDEX()->retorna uma substring em frente de uma string/caracter específica.
+
+
+Sintaxe:
+
+SELECT SUBSTRING_INDEX(coluna,'caracter/string',numeroOcorrência) FROM tabela;
+
+
+ex:SELECT SUBSTRING_INDEX(location, ',', 1) FROM my_contacts;
+
+NB: A funçao procura na coluna location, uma "," mas a primeira ocorrência dela(por isso colocamos 1) e retorna o que está antes da vírgula.
+
+
+************************************Outras funçoes úteis************************************
+
+
+SUBSTRING(String, posicaoInicial, quantidadeCaracteres)->retorna dada uma string uma quantidade de caracteres a partir de uma posicao inicial.
+
+ex:SELECT('MIRACLE CALEGE',5,3)
+
+NB:Vai retornar CLE.
+
+
+UPPER(String)->torna a string toda maiúscula.
+
+SELECT UPPER('uSa');
+
+LOWER(String)->torna a string toda minúscula.
+
+SELECT LOWER('spaGHEtti');
+
+REVERSE(String)->inverte a ordem dos caracteres.
+
+SELECT REVERSE('spaGHEtti');
+
+
+LTRIM(String)/RTRIM(String)->retorna a string sem espaços extras esquerda/direita.
+
+SELECT LTRIM(' dogfood ');
+SELECT RTRIM(' catfood ');
+
+LENGTH(your_string)->retorna o tamanho da string
+
+SELECT LENGTH('NELSON MUCAVELE');
+
+
+NB:Estas funçoes nao muda os dados na tabela simplesmente retorna(porque estamos a usar SELECT) os resultados alterados pata exibiçao.

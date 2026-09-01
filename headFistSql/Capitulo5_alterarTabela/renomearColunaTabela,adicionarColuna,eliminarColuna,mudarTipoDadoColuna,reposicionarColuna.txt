@@ -1,0 +1,123 @@
+ALTER-> é o comando usado para alterar a estrutura da tabela sem afectar os dados.
+NB:SE nos mudarmos uma coluna de um tipo de dado para o outro corremos risco de perder dados.
+
+
+**********************************Adicionando uma coluna a tabela****************************
+
+Sintaxe:
+
+ALTER TABLE nomeTabela ADD COLUMN nomeColuna tipo dado;
+
+ex: ALTER TABLE my_contacts ADD COLUMN phone VARCHAR(10);
+
+
+NB:Podemos determinar onde a coluna será posicionada usando :FIRST,AFTER.
+
+ex: ALTER TABLE my_contacts ADD COLUMN phone VARCHAR(10) AFTER firt_name;
+
+NB:Vai colocar a coluna phone logo depois da coluna first_name.
+
+
+ex2: ALTER TABLE my_contacts ADD COLUMN phone VARCHAR(10) FIRST;
+
+NB:Vai colocar a coluna phone como a primeira na tabela.
+
+
+NB:Podemos adicionar de 2 ou mais colunas em simultâneo separando por "," logo depois do tipo de dado.
+
+ex3:ALTER TABLE project_list ADD COLUMN con_phone VARCHAR(10),ADD COLUMN start_date DATE,ADD COLUMN est_cost DECIMAL(7,2);
+
+**********************************Renomeando a tabela*****************************************
+
+Sintaxe:
+
+ALTER TABLE nomeTabela RENAME TO nomeNovo;
+
+ex: ALTER TABLE my_contacts RENAME TO contactos;
+
+
+**********************************Alguns pontos a considerar *****************************************
+
+CHANGE-> altera o nome e o tipo de dados de uma coluna existente(simultaneamente).
+
+MODIFY->altera o tipo de dado ou posicao de uma coluna existente.
+
+ADD-> adiciona uma coluna a tabela.
+
+DROP->elimina uma coluna da tabela.
+
+NB:Para o uso dos comandos acima usamos basicamente a seguinte estrutura:
+
+Sintaxe:
+
+ALTER TABLE nomeTable CHANGE/MODIFY/ADD/DROP COLUMN coluna;
+
+
+**********************************Mudando o nome e o tipo de dado de uma coluna *****************************************
+
+Sintaxe:
+
+ALTER TABLE nomeTabela CHANGE COLUMN nomeAnterior novoNome tipo de dado;
+
+ex:ALTER TABLE project_list CHANGE COLUMN number proj_id INT NOT NULL AUTO_INCREMENT
+ADD PRIMARY KEY(proj_id);
+
+NB:Agora a coluna que anteriormente chamava-se  number chama-se proj_id e tem como novo tipo de dado INT.
+
+NB2:Podemos fazer alteraçao de 2 ou mais colunas em simultâneo separando por "," logo depois do tipo de dado.
+
+ex2:ALTER TABLE project_list
+CHANGE COLUMN descriptionofproj proj_desc VARCHAR(100),
+CHANGE COLUMN contractoronjob con_name VARCHAR(30);
+
+
+NB3: Se mudarmos o tipo de dados de uma coluna para um outro tipo nao compatível o SGBD vai dar erro. Mas se for compatível podemos ter casos em que os dados serao truncados.
+
+**********************************Mudando o tipo de dado de uma coluna *****************************************
+
+Sintaxe:
+
+ALTER TABLE nomeTabela MODIFY COLUMN nomeColuna novoTipoDado;
+
+ex:ALTER TABLE project_list
+MODIFY COLUMN proj_desc VARCHAR(120);
+
+NB:ALTER TABLE project_list CHANGE COLUMN nomeActual nomeActual novoTipoDado funcionaria mas usando o MODIFY é mais ideal.
+
+
+
+**********************************Mudando posicao da coluna coluna *****************************************
+
+Sintaxe:
+
+ALTER TABLE nomeTabela MODIFY COLUMN colunaAdeslocar tipoDado posicao;
+
+ex:ALTER TABLE cliente MODIFY COLUMN location varchar(100) AFTER phone;
+
+
+
+**********************************Eliminando uma coluna *****************************************
+Sintaxe:
+
+ALTER TABLE nomeTabela DROP COLUMN nomeColuna;
+
+ex:ALTER TABLE project list
+DROP COLUMN start_date;
+
+NB:Foi eliminada a coluna star_date e todos os seus dados.
+
+ex2:ALTER TABLE your_table DROP PRIMARY
+KEY; Elimina a Primary key na tabela.
+
+
+
+Supondo que previamente usamos o comando:
+
+ALTER TABLE your_table CHANGE your_id
+your_id INT(11) NOT NULL AUTO_INCREMENT;
+
+Para remover o AUTO_INCREMENT faremos:
+ALTER TABLE your_table CHANGE your_id
+your_id INT(11) NOT NULL;
+
+NB:Só podemos ter um único AUTO_INCREMENT por tabela.
