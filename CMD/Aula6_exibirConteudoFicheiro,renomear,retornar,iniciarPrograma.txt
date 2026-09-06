@@ -1,0 +1,49 @@
+type-> exibe o que tem dentro do arquivo
+
+//como usar
+
+type+arquivo
+
+ex: type oi.txt
+
+find/findstr-> retorna a linha que contem a palavra/frase que queremos(se a palavra não existir no arquivo nada será retornado)
+
+// como usar
+
+find+"palavra"+arquivo
+
+ex: find "Hello" oi.txt
+
+ren/rename->usado para renomear um arquivo
+
+//como usar
+
+ren/rename+ arquivo+ novo nome
+
+ex: ren oi.txt h1.txt
+
+prompt->usado para mudar a prompt na tela(mudar aquele caminho que o cmd mostra onde escrevemos os comando)
+
+//como usar
+ prompt +novo nome
+ex:prompt dev
+
+C:\Users\Miracle Calege\Desktop\burlando>(antes de executar o comando acima)
+
+dev(depois de executar o comando acima), faço tudo o que eu fazia antes navegar, listar , etc
+
+prompt $p$g->comando para voltar ao prompt normal
+
+start-> commando usado para abrir programas
+
+// como usar
+
+star+nome do programa
+
+ex:start WhatsApp.lnk
+
+//COMO MUDAR DE UM DISCO PARA O OUTRO(partição)
+
+Letra da partição:
+ex:D:
+

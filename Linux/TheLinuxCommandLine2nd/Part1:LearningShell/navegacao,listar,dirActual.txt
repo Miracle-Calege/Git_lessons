@@ -1,0 +1,82 @@
+*********************************************Exibindo o directório actual**********************************************************************************************************************
+
+pwd(print working directory)-> exibe o directório actual.
+
+NB:Quando abrimos o terminal, o nosso directório actual é o home. Todo usuário tem um directório home e é o único lugar onde um usuário normal é permitido escrever ficheiros.
+
+
+
+
+******************************************************Listando ficheiros e directórios*********************************************************************************************************
+
+ls-> lista ficheiros e directórios no directório actual ou um outro.
+
+
+NB:Ficheiros cujos os nomes que iniciam por "." nao serao exibidos.
+
+
+
+**********************************************Mudando de directório****************************************************************************************************************************
+
+
+cd-> usado para mudar o nosso directório actual.
+
+Sintaxe:
+
+cd caminho
+
+
+NB: O caminho pode ser absoluto ou relativo. 
+Absoluto segue a seguinte estrutura: /directório/...até o directório pretendido.
+
+o primeiro "/" representa o directório raiz.
+
+ex: cd /usr/bin
+
+NB: /usr/bin é um directório onde a maior parte dos programas do nosso sistema sao instalados.Há um directório usr que contem um directório bin.
+
+Relativo parte do directório actual até o directório pretendido.
+
+NB: Para este efeito usamos as seguintes notaçoes : "."(refere-se ao directório actual) e ".."(refere-se ao directório anterior ao actual).
+
+ex1: cd ./bin 
+
+NB:O "." pode ser omitido.
+
+ex2: cd bin
+
+O comando do ex2 vai funcionar exactamente da mesma forma que o do ex1
+
+
+ex3: cd .. 
+
+Partindo do pressuposto que estavamos no directório /usr/bin o comando acima vai nos levar ao directório usr.
+
+
+
+**************************************Alguns shortcuts usando cd*************************************************************************************************************
+
+cd-> muda o directório actual para o directório home.
+
+
+cd - ->muda o directório actual para o último directório actual(o directório que o user estava antes).
+
+
+cd ~username-> mudará o directório para o directório home do respectivo user.
+
+ex:cd ~miracle-calege
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

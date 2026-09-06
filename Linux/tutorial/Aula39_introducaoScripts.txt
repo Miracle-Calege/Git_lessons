@@ -1,0 +1,56 @@
+shell-> e um programa que interpreta os comandos do usuario directamente ou pode interpretar atraves de um ficheiro.
+
+cat /etc/shells-> retornas todos os shell que o nosso sistema suporta.
+
+bash(bourne again shell)
+
+which bash-> para saber onde o bash esta.
+//****************************************************************************//
+
+//Como criar um script bash
+
+1.Criar um ficheiro:
+
+nano/touch nome do ficheiro.sh
+
+ex: touch myFirstScript.sh
+
+2.Na primeira linha do ficheiro colocamos a localizacao do shell( retornado por which bash) precedida por "#!":
+
+ex: #!/usr/bin/bash
+
+3.Adicionar ao script o comando a ser executado
+
+ex: echo "Hello World"
+
+4.Executando o script
+
+ex:./nome do script.sh
+
+NB:Antes do passo 4 devemos mudar a permissao do ficheiro para executavel(este comando nao consta no script)
+
+ex: chmod +x nome do ficheiro.sh
+
+//****************************************************************************//
+
+exemplo do script
+#!/usr/bin/bash
+echo "Hello World"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

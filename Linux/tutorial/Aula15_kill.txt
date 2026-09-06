@@ -1,0 +1,33 @@
+kill-> usado para terminar processos
+
+pidof-> retorna o PID do determinado processo
+
+//como usar
+
+pidof+nome do processo
+
+ex: pidof vlc
+
+//como usar kill
+
+kill+PID
+
+ex:kill 6805
+
+NB: kill -KILL PID ou kill -9 PID -> usado para processos persistentes que nao conseguimos terminal usando o kill PID
+
+ps-> exibe informacao(incluse o PID e o nome do processo) sobre um determinado processo 
+
+ps -ux->exibe uma lista de processos detalhando cada um,(utilizado apenas pelo utilizador actual)
+
+ps -aux->exibe uma lista de processos detalhando cada um,(utilizado por todos usuarios)
+
+ps -U+nome do usuario-> para saber quais os processos estao a ser usado por determinado usuario
+
+ex:ps -U miracle-calege
+
+ps -C+ nome do processo-> mostra todos processos relacionados a esse programa/processo
+
+ex: ps -C vlc
+
+

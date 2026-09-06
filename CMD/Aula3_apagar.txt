@@ -1,0 +1,4 @@
+del/erase *."extensao"-> apaga todos os arquivos de extensao txt
+ex: del *.txt
+
+del/erase *.*->para apagar todos os arquivos

@@ -1,0 +1,12 @@
+chmod->tambem pode ser usado para mudar as permissoes de um directorio/pasta.
+
+chmod tipo de usuario +/- tipo de permissao nome do directorio
+
+ex1:chmod u-w dir3
+ex2:chmod u-r dir3
+ex3:chmod u-x dir3
+
+NB:Para ex1 se tentarmos criar um arquivo no dir3 exibira :permission denied
+Para ex2 se tentarmos listar o conteudos do directorio(ls) exibira :permission denied
+ 
+

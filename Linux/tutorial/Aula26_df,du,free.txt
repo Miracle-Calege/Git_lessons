@@ -1,0 +1,8 @@
+df-> retorna a quantidade de espaço de armazenamento usado por ficheiros(do sistema no geral)
+
+df-h-> exibe de uma forma mais legível
+
+du-> exibe os arquivos e o espaço de armazenamento usado por cada ficheiro de  um directório/pasta(É importante estar na pasta pretendida)
+
+free->exibe o total de espaço de armazenamento(usado e livre)
+

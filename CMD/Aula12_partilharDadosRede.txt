@@ -1,0 +1,14 @@
+net share->usado para compartilhar arquivos numa rede
+
+//como usar
+
+net share nome do compartilhamento(a sua escolha) "path do que pretende partilhar" /grant: nome do usuario,permissao(READ,CHANGE,FULL), numero maximo de usuarios
+
+ex:net share Teste "miracle Calege\Documents\test" /grant:everyone,FULL /users:4
+
+//no outro computador/usuario
+
+usamos o comando:
+
+net use \\ip da maquina que esta a compartilhar o arquivo connosco\nome do compartilhamento
+ 

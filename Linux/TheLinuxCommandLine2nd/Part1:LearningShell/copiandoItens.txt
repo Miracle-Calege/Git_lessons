@@ -1,0 +1,52 @@
+cp-> é um comando usado para copiar ficheiros e directórios.
+
+
+
+**********************************Copiando de um ficheiro/directório para o outro*********************************************************************************************
+
+Sintaxe:
+
+cp item1 item2
+
+NB:item pode ser ficheiro ou directório. Neste caso estamos a copiar o conteúdo do item1 para o item2. Se o ficheiro item2 tiver conteúdo vai ser sobrescrito pelo conteúdo do item1 ou se o item2 nao existir será criado.
+
+ex:cp test.txt out.txt
+
+
+**********************************Copiando múltiplos ficheiros ou directórios  para um directório*********************************************************************************************
+
+Sintaxe:
+
+cp item1... item2 directório
+
+
+ex:cp t1.txt t2.txt training
+
+NB: Copiamos os ficheiros .txt para o directório training.É obrigatório que o directório já exista.
+
+
+
+******************************************Algumas options úteis****************************************************************************************************************************
+
+
+Option					Significado
+
+-a,--archive				copia ficheiros e directórios e todos os seus atributos titularidade e permissoes.
+
+
+-i,--interactive			Antes de subsescrever um ficheiro existente vai pedir a confirmaçao do user.
+
+-r, --recursive				Copia os directórios e os seus conteúdos(Esta ou "-a" sao obrigatórios quando copiamos directórios).
+
+-u, --update				Copia somente os ficheiros que nao existem(ou mais recentes) para directório destino
+
+-v, --verbose				exibe uma mensagem informativa acerca de como a copia está a ser executada.
+
+
+******************************************Alguns exemplos****************************************************************************************************************************
+
+Comando						Resultado
+
+cp -r dir1 dir2					Copia o conteúdo do dir1 para o dir2(se o dir2 nao existir será criado).
+
+cp dir1/* dir2					Copia o conteúdo do dir1 para o dir2(o dir2 deve existir).

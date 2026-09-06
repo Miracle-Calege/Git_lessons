@@ -1,0 +1,14 @@
+date->usado para imprimir ou mudar o data do so.
+
+//Mudar a data
+date -s "data"-> muda a data do so
+ex: date -s "29/12/2000 12:49:01"
+
+//Formatar a data que será exibida no terminal
+
+ex:date +%a%d%b%Y(estes formatos podem ser encontrados no manual -man date)
+
+ex1:date "+%a-%d-%b-%Y"(adicionamos "" para tornar a formatação uma string para podermos adicionar"-")
+
+
+

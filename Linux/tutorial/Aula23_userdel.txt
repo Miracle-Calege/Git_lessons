@@ -1,0 +1,8 @@
+userdel-> usado para eliminar usuários no linux
+
+//como usar
+
+sudo userdel nome do usuario
+
+ex:sudo userdel "Siswe Calege"(o usuário é apagado menos o directório home)
+sudo userdel -r "Siswe Calege"(o usuário e o directório home serão apagados)

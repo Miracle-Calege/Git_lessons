@@ -1,0 +1,17 @@
+netsh-> usado para configurar, monitorar e diagnosticar a rede.
+
+netsh wlan show profiles->mostra todas as redes wifi em que o computador já esteve conectado
+
+netsh wlan show profiles+nome da rede+key=clear->exibe a senha do wifi
+
+ex:netsh wlan show profiles "Home" key=clear
+
+netsh wlna set hostednetwork mode=allow ssid=nome da rede key=passoword-> este commando cria um ponto de acesso de internet no nosso computador
+
+ex:netsh wlan set hostednetwork mode=allow ssid=myNetwork key=
+
+netsh wlan start hostednetwork->activa o comando acima
+
+netsh wlan stop hostednetwork->interrompe a hospedagem 
+
+netsh wlan show hostednetwork->exibe informações sobre a rede 

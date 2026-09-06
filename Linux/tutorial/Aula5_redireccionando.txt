@@ -1,0 +1,15 @@
+>->redirecciona o resultado de um comando(nao so o cat) para um ficheiro
+
+comando > nome.extensao
+ex: cat > test.txt -> o que escrevermos no terminar sera escrito no ficheiro
+
+comando >> nome.extensao ->mantem o conteudo ja existe e adiciona outro
+ex: cat >> test.txt 
+
+comando nome1.extensao nome2.extensao >nome3.extensao ->manda o conteudo de dois ficheiros diferentes para um outro ficheiro
+
+ex:cat teste.txt out.txt > concat.txt
+
+cat nome1.extensao >>nome2.extensao->manda o conteudo de um ficheiro para um outro que tambem tem conteudo
+
+ex:cat teste.txt >> out.txt

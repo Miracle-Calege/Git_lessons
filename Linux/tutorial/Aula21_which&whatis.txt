@@ -1,0 +1,22 @@
+
+which->usado para retornar o path/localização de ficheiros executaveis(external commands)
+
+//como usar
+
+which comando
+ex: which ls
+ex1:which firefox
+
+//No bash scripting é boa práctica sempre escrever o absolute path do ficheiro executável
+
+
+whatis->retorna uma pequena descrição de um comando
+
+//como usar
+
+whatis comando
+
+ex:whatis ls
+output:ls (1)               - list directory contents
+
+

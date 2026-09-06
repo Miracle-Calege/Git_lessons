@@ -1,0 +1,30 @@
+choice-> permite que o usuário escolha um determinado item de uma lista
+
+choice /C-> cria um lista de escolhar com opções ao critério do usuário
+
+//como usar
+
+choice /C opções
+
+ex:choice /c abc-> essas opções serão exibidas
+
+choice /M->determina a mensagem a ser exibida com as opções
+
+//como usar
+
+choice /M "Mensagem"
+ex: choice /M "Selecione a opção"
+
+ERRORLEVEL-> são os retornos que um batch pode ter, indicando se foi bem sucessido(retorno 0) e se não tiver sido o tipo de retorno indicará o tipo de erro.
+
+//exemplo
+@echo off
+choice /C abc /M "Insira a opcao"
+if ERRORLEVEL 1 echo opcao1
+if ERRORLEVEL 2 echo opcao2
+if ERRORLEVEL 3 echo opcao3
+pause>nul
+//A-1,B-2,C-3
+se escolhermos  opção A o ERROLEVEL=1 e vai imprimir opção 1
+As de mais opções vai imprimir primeiro as opções acima da sua opção e por último a sua opção
+

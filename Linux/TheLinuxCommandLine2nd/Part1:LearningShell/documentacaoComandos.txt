@@ -1,0 +1,97 @@
+help-> retorna uma directriz de como usar um certo comando.
+
+
+Sintaxe:
+
+help comando
+
+ex: help cd
+
+
+NB: Para programas executáveis usamos --help.
+
+Sintaxe: 
+
+comando --help
+
+ex: mkdir --help
+
+ex2: firefox --help
+
+***********************************************************man************************************************************************************************************************
+man->também retorna uma directriz, só que mais ampla orientando como usar os comandos.
+
+Sintaxe:
+
+man comando
+
+ex: man ls
+
+
+NB:As vezes é necessário especificar o número da section que estamos a procura.
+
+Sintaxe:
+
+man section comando
+
+ex:man 5 passwd
+
+NB: man -k tem o mesmo efeito que apropos
+
+***********************************************************apropos************************************************************************************************************************
+
+apropos-> sugere alguns comandos e as respectivas descriçoes numa lista relacionados com a palavra-chave que inserimos.O comando retorna a página do manual e a section.
+
+Sintaxe:
+
+apropos palavra-chave
+
+ex: apropos directory
+
+ex2:apropos partition
+
+
+***********************************************************whatis************************************************************************************************************************
+
+whatis->retorna a descriçao de um comando de forma muito breve.
+
+Sintaxe:
+
+whatis comando
+
+ex: whatis ls
+
+
+
+***********************************************************info************************************************************************************************************************
+
+info-> exibe documentaçao detalhada sobre um comando de forma scrolável.
+
+Sintaxe:
+
+info comando
+
+ex: info coreutils
+
+
+
+comando                                         acçao
+?						exibe o comando help
+
+arrow up/backspace				exibe a página anterior
+
+page down/espaco				exibe a página seguinte
+
+n						exibe o próximo nó
+
+p						exibe o nó anterior
+
+U						exibe o nó pai do nó actual
+
+Enter						segue o hyperlink na localizaçao do cursor
+
+Q						sai do comando.
+
+
+
+NB:Maior parte da documentaçao dos ficheiros fica no directório /usr/share/doc alguns ficheiros sao acessíveis via less e os outros via zless(para ficheiros comprimidos .gz)

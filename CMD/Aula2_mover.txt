@@ -1,0 +1,25 @@
+move->usado para mover arquivos de uma pasta para outra
+
+//como usar
+
+move+nome o arquivo+caminho absoluto da pasta onde queremos mandar o arquivo
+
+ex:move mulenga.pdf "C:\Users\Miracle Calege\Desktop\aula2"
+NB: O caminho absoluto está entre aspas porque um dos nomes do directório tem espaço (Miracle Calege), mas se não tive não haveria necessidade de colocar aspas
+
+move+/y+caminho absoluto da pasta-> usado para substituir na pasta um arquivo com mesmo nome sem questionar
+
+ex:move /y mulenga.pdf "C:\Users\Miracle Calege\Desktop\aula2"(supondo que já haja um livro Mulenga.pdf o Sistema vai substituir sem fazer nenhum questionamento)
+
+
+move+/-y+caminho absoluto da pasta-> usado para substituir na pasta um arquivo com mesmo nome sem questionar
+
+ex:move /-y mulenga.pdf "C:\Users\Miracle Calege\Desktop\aula2"(supondo que já haja um livro Mulenga.pdf o Sistema vai questionar se realmente que fazer o overwrite do arquivo).
+
+comando /?->o cmd fornece-nos um guideline de como Podemos usar esse commando
+
+ex:move /?
+
+help->exibe todos os comandos disponíveis e suas funcionalidades
+
+

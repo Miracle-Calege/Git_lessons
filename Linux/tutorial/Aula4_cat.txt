@@ -1,0 +1,29 @@
+cat->exibe o texto que escrevemos no terminal
+
+ctrl+d nos permite sair do cat
+
+cat+ ficheiro.extensao->exibe o conteudo de um ficheirocat
+
+ex: cat out.txt
+
+ex2:cat createDB.txt createTable.txt->para listar o conteudo de multiplos ficheiros
+
+
+cat -b+ficheiro.extensao->enumera as linhas dos ficheiros durante a impressao
+
+ex:cat -b createDB.txt
+
+cat -s+ficheiro.extensao->reduz todos os espacos em branco em apenas um durante a impressao
+
+ex:cat -s createDB.txt
+
+cat -E+ficheiro.extensao->coloca "$" no fim de cada linha
+
+ex:cat -E createDB.txt
+
+cat > ficheiro."extensao"->cria se nao exisir um ficheiro com esse nome e escreve nele
+
+ex:cat > abc.txt
+NB:Para indicar que ja terminou de escrever clique ctrl+d
+
+man cat-> para conhecer mais combinacoes 

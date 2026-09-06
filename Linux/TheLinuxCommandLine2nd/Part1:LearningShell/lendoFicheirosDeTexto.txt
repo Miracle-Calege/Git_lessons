@@ -1,0 +1,36 @@
+less->é um comando usado para visualizar o conteúdo do tipo texto em ficheiros.
+
+Sintaxe:
+
+less nomeFicheiro
+
+ex: less test.txt
+
+ex2:less /etc/passwd
+
+NB:Usamos o "q" para sair do comando less.
+
+
+**************************Alguns comandos para usar com less*******************************************************
+
+Comando 				Acçao
+
+page up ou b			volta a pagina anterior
+
+page down ou space		vai para a próxima página
+
+up arrow			sobe uma linha
+
+down arrow			desce uma linha
+
+G				vai para o fim do ficheiro
+
+g				vai para inicio do ficheiro
+
+/caracteres			procura a sequência de caracteres
+
+n				procura pela próxima ocorrência da pesquisa anterior
+
+h				exibe a tela de ajuda
+	
+q				sair do less

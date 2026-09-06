@@ -1,0 +1,57 @@
+*********************************************************************Soft link(symbolic link)*************************************************************************************************
+
+Se colocarmos este comando : ls -l /lib.
+
+Teremos uma saída similar a esta: lrwxrwxrwx 1 root root 7 Apr 22  2024 /lib -> usr/lib
+
+Notaremos que a primeira letra da saída  é "l" nos indicando que é um symbolic link.No nosso caso temos um directório /lib(que é o nosso link) que aponta para o usr/lib, entao sempre que fazemos uma listagem no /lib na verdade estamos a listar usr/lib. 1 representa o número de links, 7 o tamanho do  link.
+
+NB:Para a criaçao tanto de soft e hard link usamos o comando ln só com uma sutil diferença.
+
+Soft link foi criada para superar as limitaçoes do hard link, cria um tipo de ficheiro que contem um ponteiro que referencia um ficheiro ou directório.
+O soft link e o ficheiro apontado pelo soft link sao indistinguíveis, pois terao o mesmo conteúdo. Se escrevermos algo no soft link o ficheiro referenciado também será escrito. Se deletarmos um deles o outro vai existir(ex: se eu deletar o link o ficheiro ainda existirá, se o ficheiro for deletado o link ainda existirá mas apontado para nada-estará quebrado(Geralmnente o sistema usará uma cor para mostrar link quebrados)).
+
+Sintaxe:
+
+ln -s item link
+
+NB:Item pode ser ficheiro ou directório.
+
+l -s fun fun-sym
+
+NB:Podemos usar também caminhos absolutos ou relativos para criar soft links
+
+ex2: ln -s /home/lab/playground/fun dir1/fun-sym
+
+
+
+
+
+*********************************************************************Hard link*************************************************************************************************
+
+Hard link-> permite que ficheiros tenham vários nomes.Basicamente é a criaçao de nomes diferentes que referem o conteúdo do mesmo ficheiro.
+
+Se listarmos usando o ls -li se os links tiverem o mesmo inode number(o primeiro argumento do output) significa que o conteúdo é o mesmo.
+
+
+
+Sintaxe:
+
+ln file link
+
+
+NB:Por defeito todos ficheiros tem um hard link que dá nome ao ficheiro.
+
+ex:ln fun fun-hard
+
+fun-hard será o nome do link
+
+Limitaçoes:
+
+1.Hard link nao pode referenciar um ficheiro que nao esteja na mesma partiçao do disco que o link(fora do seu sistema de ficheiros).
+2.Hard link nao referencia directórios.
+
+
+NB:Hard link é indistinguível de um ficheiro, pois nao existe uma indicaçao especial a mostrar que é um link diferente do symbolic link que temos(uma seta é exibida).Quando o hard link é deletado o link também é mas o conteúdo do ficheiro ainda existirá.Prácticas modernas optam pelo uso de symbolic links.
+
+

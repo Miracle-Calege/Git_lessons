@@ -1,0 +1,43 @@
+É possível executar vários comandos simultaneamente.
+
+Sintaxe:
+
+comando1; comando2;...; comandoN
+
+ex: cd /usr; ls; cd -
+
+
+*********************************************************************Criando um comando*******************************************************************************************************
+
+alias-> é usado para criar comandos.
+
+ NB:Verificar se o nome escolhido para o nosso comando nao faz parte dos comandos do shell(type comando).
+
+Sintaxe:
+
+alias nomeComando='acçao'
+
+NB:Depois do nomeComando nao pode haver espaços.
+
+
+ex: alias foo='cd /usr; ls; cd-'
+
+Agora invés de escrevermos todos esses comandos só escreveremos foo. Se fizermos type foo veremos que o output será algo "foo is aliased"
+
+Se fecharmos o terminal e reabrirmos o nosso comando novo nao funcionará, só é funcionar enquanto o terminal estiver aberto logo depois da sua criaçao.
+
+
+unalias-> para fazer o processo inverso.
+
+Sintaxe 
+
+unalias comando
+
+ex:unalias foo
+
+
+NB:alias sem argumento pode ser usado para visualizar comandos "aliased".
+
+
+
+

@@ -1,0 +1,35 @@
+find-> encontra um determinado arquivo num determinado caminho/path
+
+// como usar
+
+find caminho(onde possivelmente possa estar o ficheiro) -name nome do arquivo.extensão
+
+ex: find /home/miracle-calege -name myscript.sh
+
+//Caso não conheçamos a extensão 
+
+find  caminho -name nome do arquivo.*
+
+ex: find /home/miracle-calege -name myscript.*
+
+//Caso queiramos um ficheiro de uma determinada extensão
+
+find  caminho -name "*.extensão"
+
+ex: find /home/miracle-calege -name "*.txt"
+
+//para procurar o arquivo em todo SO(no directório root)
+
+find / -name nome do arquivo
+
+ex: find / -name myscript.sh (é aconselhável a usar com sudo)
+
+//Pesquisar usando número de dias como referência
+
+find caminho -mtime +/- número de dias
+
+ex:find /home/miracle-calege/Documents -mtime -1
+
+
+
+

@@ -1,0 +1,17 @@
+mkdir->usado para criar directorios
+
+mkdir+dir->cria um directorio
+
+ex:mkdir image
+
+mkdir+dir.pai/sub.dir->cria um subdirectorio no directorio image
+
+ex:mkdir image/pics
+
+mkdir -p dir/sub.dir->cria simultaneamente o directorio e o subdirectorio(cria um dentro do outro)
+
+ex: mkdir -p names/mark(mark estara dentro do names)
+
+mkdir -p dir/{subdir1,subdir2,subdir3}->para criar um directorio e varios subdirectorios(dentro do names, teremos dir 1,dir2,dir3)
+
+ex:mkdir -p names/{dir1,dir2,dir3}

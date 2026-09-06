@@ -1,0 +1,31 @@
+
+#Debugging
+
+1.Metodo
+
+No momento da execucao do script: bash -x ./nome do script
+
+ex: bash -x ./myFirstScript
+
+NB:Executa passo a passo o script exibindo no terminal
+
+
+2.Metodo 
+
+Colocar-x cabeçalho do script
+
+ex: #!/usr/bin/bash -x
+
+NB:Executa passo a passo o script exibindo no terminal
+
+3.Metodo
+
+set -x ponto de partida 
+scripts
+
+set +x ponto de chegada
+
+
+NB:Executa passo a passo a partir de onde foi colocado -x ate +x. 
+
+

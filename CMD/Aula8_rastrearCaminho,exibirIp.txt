@@ -1,0 +1,39 @@
+tracert-> rastrea o caminho que estou a fazer de um computador para o outro
+este commando exibe o ip do nosso router,nosso provedor de internet
+
+//como usar
+
+tracert+site
+ex: tracert www.google.com
+
+arp-> comando que exibe o comando IP na rede e o seu correspondende físico(mac), o comando é usado com caracteres
+
+//como usar
+
+arp -caracter
+
+ex:arp -a
+
+pathping->funcionalidades de tracert +usado para ver onde está a haver perda de pacote,o comando é usado com caracteres
+
+//como usar
+
+pathping -caracter+site
+
+ex:pathping -n www.youtube.com
+
+nslookup → mostra o IP de um domínio
+
+//como usar
+
+nslookup+site
+
+ex:nslookup www.youtube.com
+
+ping-> serve para testar se um computador ou servidor na rede está acessível e medir o tempo de resposta da conexão.
+
+//como usar
+
+ping+website
+
+ex:ping www.youtube.com

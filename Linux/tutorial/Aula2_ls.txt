@@ -1,0 +1,49 @@
+
+ls->lista todos os ficheiros que estao no directorio
+
+ls+pasta/->retorna o conteudo da pasta(e importante que a pasta mencionada esteja no directorio presente)
+
+ex:ls Documents/
+
+ex2: ls /->lista todos os ficheiros do root
+
+NB:comandos que sao anexados com pastas/ficheiros/directorios devem levar sempre um espaco entre o comando e o pasta/ficheiro/directorio
+ex: lsDocuments/->erro
+
+    ls Documents/->certo
+
+clear->limpa o terminal
+
+ls+directorio->retorna  todos os ficheiros do directorio
+
+ex1: ls ~ (~ e o directorio home)
+
+ex2:ls /home/miracle-calege/Videos/linux
+
+ls ..->lista os conteudos do directorio anterior ao presente
+ls ../..-> lista os conteudos do directorio anterior ao anterior do presente(recuar 2 vezes)
+
+ls -l->lista os conteudos do directorio na forma longa(detalhado)
+ls -a-> lista os conteudos do directorio incluse os ocultos(comecados por ".")
+ls -al-> combinando os dois acima
+
+ls-lS->lista os conteudos do directorio em ordem decrescente do tamanho
+
+ls+pasta/*.extensao
+ex1:ls Documents/*.txt->lista todos os ficheiros na pasta com a terminacao .txt(* significa qualquer prefixo)
+
+ex2:ls Documents/Mysql-lessons/*.txt
+
+ls+pasta+/*.*
+ex:ls Documents/*.*->lista dos ficheiros com ponto na nomenclatura
+
+ls -ls > out.txt->executa o comando ls -lS e coloca o resultado no ficheiro out.txt (NB:podem ser usados outros alem de lS, ls >out.txt ou ls al >out.txt)
+
+ls -d */->lista somente os directorios
+
+man ls->uma lista de caracteres que podem ser usados com ls
+
+
+
+
+

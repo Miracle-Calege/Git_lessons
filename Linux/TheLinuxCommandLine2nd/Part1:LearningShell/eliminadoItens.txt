@@ -1,0 +1,27 @@
+rm-> é um comando usado para remover/deletar ficheiros e directórios.
+
+Sintaxe:
+
+rm item1... itemN
+
+NB:item pode ser um ficheiro ou directório.Podemos eliminar um ou mais itens em simultâneo.
+
+
+
+******************************************Algumas options úteis****************************************************************************************************************************
+
+
+Option					Significado
+
+-i,--interactive			Antes de deletar um ficheiro existente vai pedir a confirmaçao do user.
+
+-r, --recursive				deleta os directórios e os seus subdirectórios(É obrigatório quando deletamos directórios).
+
+-f, --force				ignora ficheiros nao existentes(sem apresentar mensagem de erro).		
+
+-v, --verbose				exibe uma mensagem informativa acerca de como a eliminaçao está a ser executada.
+
+
+
+
+

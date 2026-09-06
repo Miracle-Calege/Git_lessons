@@ -1,0 +1,15 @@
+nano-> tambem usado para criar um novo ficheiro e escrever nele
+
+//criando ficheiros usando nano
+
+nano+nome+."extensao"
+
+ex:nano file.txt
+ex2:nano abc.cpp(ficheiro c++)
+
+NB:nano acaba por ser mais dinamico que cat e touch por ter alguns "shortcuts" nele, e pode ser usado para escrever codigo em linguagens de programacao.
+
+//durante a criacao de um ficheiro usando nano, o terminal vai exibir alguns caracteres que devem ser usado juntamente com ctrl
+
+ex: ctrl x->usado para sair do terminal
+

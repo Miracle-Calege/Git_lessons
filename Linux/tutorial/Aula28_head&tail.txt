@@ -1,0 +1,21 @@
+head-> imprime a primeira parte do ficheiro
+tail-imprime a última parte do ficheiro
+NB:Por defeito imprime as primeira 10 linhas(Head) ou as últimas 10 linhas(tail)
+
+//como usar
+
+head/tail arquivo
+ex: head dmesg
+ex2:tail dmesg
+
+head/tail -nnúmero arquivo (-n determina a quantidade de linhas que queremos exibir)
+
+ex: head -n3 dmesg
+ex2:tail -n3 dmesg
+
+head/tail podem ser usado com mais de um ficheiro/arquivo
+
+ex: head dmesg
+ex2:tail dmesg 
+
+

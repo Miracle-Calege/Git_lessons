@@ -1,0 +1,31 @@
+Shell->é o programa que leva os comandos passados pelo teclado e passa-os para o sistema operativo executar.
+
+A maior parte das distribuiçoes linux  usa um shell chamado bash(Bourne again shell).
+
+
+NB:O terminal é que nos dá acesso ao shell.
+
+
+Quando abrimos o terminal visualizamos o "shell prompt" composto por:
+
+username@nomemaquina directórioactual $
+
+NB:Se o último caracter do prompt for "#" invés do "$" significa que o terminal tem privilégios de superusuário.
+
+
+Depois de inserirmos um comando no terminal podemos usar as setas(up e down) para reinserir o último comando. Por defeito o linux guarda os últimos 1000 comandos.
+
+
+***********************************************************Alguns comandos*********************************************************************
+
+date->retorna a data e hora actual.
+
+cal->retorna o calendário do mês actual.
+
+df->mostra o espaço livre nos dispositivos de armazenamento.
+
+free->mostra a quantidade de memória disponível(RAM).
+
+
+exit-> fecha o terminal.Podemos usar ctrld +d para o mesmo efeito.
+

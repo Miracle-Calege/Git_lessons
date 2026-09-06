@@ -1,0 +1,20 @@
+Comandos podem ser identificados como sendo:
+
+1.Um programa executável
+
+2.Um shell builtin(comando nativo do shell)
+
+3.Uma funçao do shell
+
+4.Um alias(um comando definido por nós)
+
+
+*******************************************************Exibindo o tipo de comando**************************************************************************************************************
+
+Sintaxe:
+
+type comando
+
+ex: type type
+
+ex2:type ls

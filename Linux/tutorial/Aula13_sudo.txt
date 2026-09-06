@@ -1,0 +1,17 @@
+sudo->da alguns privilegios como administrador
+
+//usamos em casos em que tentamos executar um comando e recebemos a mensagem: Permission denied
+//como usar
+
+sudo+comando
+
+ex: sudo mkdir newdir (criaremos uma pasta onde a permissao foi nos negada quando nao usamos o sudo)
+
+apt-get install+software -> comando usado para instalar software(tambem deve ser usado com sudo)
+
+ex: sudo apt-get install eclipse
+
+ctrl+shift+t-> vai abrir uma outra aba no terminal permitindo executar outras actividades noutra aba em paralelo com a outra ja aberta
+
+
+

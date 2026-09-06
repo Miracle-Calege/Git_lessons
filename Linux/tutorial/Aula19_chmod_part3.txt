@@ -1,0 +1,44 @@
+permissoes octal e numericais-> e a representacao numerica da permissao do ficheiro/arquivo
+
+//No sistema binario
+1->significa permissao activa/concedida
+0->permissao desactivada/nao- concedida
+
+ex: users                 group                 others
+    r w x		  r w x                 r  w  x
+    1 1 1             	  1 0 1                 1  1  0
+    
+    -> significa que o u tem permissao para ler,escrever e executar, g tem permissao somente para ler e executar e o tem permissao somente para ler e escrever.
+    
+    //No sistema octal(convertendo binario->octal)
+    
+    Regras de ATC-> separar os binarios em grupos de 3 e para cada grupo de tres multiplicar os digitos do binarios por potencias de base dois sendo que o expoente iniciara por zero e incrementara uma unidade, essa operacao(multiplicacao) e feita de direita para esquerdaa(em ordem crescente aos expoentes).
+    
+    ex:para users
+      r    w   x
+      1    1   1
+      2^2 2^1  2^0   =4*1+2*1+1*1=7, entao para ter todas permissoes permitidas o valor em octal e 7  
+   
+   converter Octal-> binario
+  1. Dispomos da direita para esquerda(em ordem crescente aos expoentes) os valores que sao resultados de uma potencia de base dois, considerando que o expoente iniciara por 0 e incrementara uma unidade.
+   
+   2.CONDICAO DE PARADA: Para-se quando o resultado de uma das potencias for igual ao valor em octal ou se o valor a seguir a essa potencia for superior ao valor em octal
+   
+   3.Nos resultados encontrados, procuramos um valor que seja igual ao valor em octal ou procuramos valores cujo a sua soma sera igual ao valor em octal,encontrados os valores consideramo-los iguais a 1 e o resto igual a 0.
+   
+   
+   ex: converter 7 em binario
+   			
+      2^2  2^1 2^0(paramos no 2^2 porque 2^3>7)
+     4+2+1=7 entao teremos 1 1 1 no lugar de cada potencia
+     
+     //como usar
+     
+    chmod num1num2num3 nome do ficheiro
+    
+    ex:chmod 755 file.txt
+    	chmod 000 file.txt-> retira permissoes(0=permissao nenhuma)
+                  
+   
+   
+    

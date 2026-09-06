@@ -1,0 +1,34 @@
+dir /o:"ordem especifica"->lista os arquivos em uma determinada ordem
+
+ex:dir /o:n->lista os arquivos em ordem alfabética(as iniciais de ordem podem ser encontradas escrevendo no dir /?)
+
+dir /b->exibe o conteúdo do directório(exibe somente os nomes e extensões)
+
+dir /q->exibe arquivos e a entidade que criou
+
+dir /t/?-> para sabermos quais caracteres Podemos usar com dir /t
+
+dir /t->exibe de forma específica as informações sobre os conteúdos nesse determinado directório(nome, tamanho, data de criação/alteração)
+
+dir /t:a->última vez que acessamos à um arquivo
+ 
+dir /t:w->última vez que alteramos um ficheiro
+
+echo+uma frase a sua escolha >> nome do ficheiro a escolha.txt->cria(se nao existir o ficheiro com esse nome) e escreve no ficheiro
+
+ex:echo escrever num ficheiro >> aula3.txt
+
+NB:echo escrever num ficheiro > aula3.txt(só com 1 ">") apaga o conteúdo existe no ficheiro e coloca o novo enquanto o acima(com 2 ">") mantem o conteúdo anterior e adiciona outro no fim do ficheiro
+
+ver->exibe a versão do windows
+
+fc->compara dois ou mais ficheiros e exibe os seus conteudos
+//como usar
+
+fc ficheiro1."extensao" ficheiro2."extensao"
+
+ex:fc oi.txt oi2.txt
+
+tree->vai listar tudo o que tem nos directórios e subdirectórios, como se fosse uma espécie de árvore genealógica
+
+

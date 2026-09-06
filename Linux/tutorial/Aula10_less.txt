@@ -1,0 +1,28 @@
+less-> usado para ler arquivos e procurar dados especificos num arquivo
+
+//como usar
+
+less+nome do arquivo/ficheiro
+
+ex:less big.txt
+
+
+space key-> vai a proxima pagina
+b-> para ir a pagina anterior
+shift+g(G)-> para ir ao fim do arquivo
+1-> inicio do arquivo
+q->para sair do comando less
+
+//para procurar palavras especificas de cima para baixo:
+
+/+palavra
+
+ex:/book
+
+//para procurar palavras especificas de baixo para cima:
+
+?+palavra
+ex:?command
+
+cat vs less
+less-> mais eficiente que o cat para ler arquivos extensos, porque cat pode nao permitir visualizar todo o conteudo do ficheiro se este for muito extenso

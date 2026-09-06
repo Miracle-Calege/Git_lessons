@@ -1,0 +1,27 @@
+//script-> e um ficheiro que contem sequencia de comandos baseado em linux(bash).
+ Cria-se um ficheiro(e boa pratica colocar a extensao.sh durante a nomenclatura do ficheiro)
+ 
+ex:nano myscript.sh
+
+NB: Antes de iniciar um script devemos escrever: #!path do interpretador de bash(which bash-retornara o caminho).
+
+// Criando e executando um script
+1.Criamos um ficheiro do tipo.sh
+2. Colocamos #!path do interpretador de bash
+3.Colocamos a instrução a ser executada
+No terminal
+4.Apos o ficheiro ter sido criado: vamos ao terminar e adicionamos a permissao de executar
+no ficheiro(chmod +x nome do ficheiro script.sh)
+5.Executar(./nome do ficheiro script.sh)
+
+// exemplos
+
+  nano myscript.sh/touch myscript.sh 
+  #!/usr/bin/bash -> o interpretador de script
+  ls-l->  a instrucao
+  //no terminal
+  chmod +x myscript.sh-> adicionando a permissao para executar
+  ./myscript.sh-> execução
+  
+
+

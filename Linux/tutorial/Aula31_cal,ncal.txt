@@ -1,0 +1,12 @@
+ncal/cal-> usado para exibir o calendário no terminal,os dias do  mês do ano actual(Nas distribuições actuais precisa de ser instalado a parte).
+
+cal ano-> exibe os dias e meses desse determinado ano
+
+ex: cal 2026
+
+cal mês ano-> exibe os dias desse mês(deve estar em forma numérica) e o ano.
+ex:cal 3 2026
+
+ cal -3-> exibe o mês anterior, actual e o próximo
+
+

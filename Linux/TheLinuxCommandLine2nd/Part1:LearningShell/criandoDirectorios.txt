@@ -1,0 +1,20 @@
+mkdir-> é um comando usado para criar directórios.
+
+
+Sintaxe:
+
+mkdir dir1 ... dirN
+
+
+NB:Podemos criar um ou mais directórios simultaneamente.
+
+ex1: mkdir dir1 
+
+Criamos somente um directório com o nome dir1.
+
+
+ex2: mkdir dir1 dir2 dir3
+
+Criamos 3 directórios com os nomes dir1 dir2 dir3.
+
+

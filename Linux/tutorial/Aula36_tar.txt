@@ -1,0 +1,21 @@
+tar-> usado para criar,manter, modificar e extrair ficheiros armazenados no formato tar.
+
+//para criar um arquivo do tipo tar
+
+tar -cvf nome do arquivo(que esta a ser criado).tar nome do arquivo de quer comprimir.
+
+ex: tar -cvf test.tar test
+
+//para extrair
+
+tar -xvf nome do ficheiro tar
+
+ex: tar -xvf test.tar
+
+//para criar um arquivo tar.gz
+
+tar -czvf nome do arquivo(que está a ser criado) nome do arquivo a ser comprimido.
+
+ex: tar -czvf test.tar.gz test
+
+

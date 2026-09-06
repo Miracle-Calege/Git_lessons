@@ -1,0 +1,18 @@
+useradd->cria um usuário no linux
+
+//como usar
+
+sudo useradd nome(a sua escolha)
+
+ex:sudo useradd "Siswe Calege"
+
+useradd Siswe Calege -m -s /bin/bash -g users -c "Criando um usuario"(-m cria o directorio home, -s determina o shell que será usado, -g determina o nome do grupo, -c adiciona um comentario).
+
+passwd->para adicionar password ao novo user
+
+//como usar
+
+sudo passwd nome do usuario
+
+ex: sudo passwd "Siswe Calege"
+

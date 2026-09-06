@@ -1,0 +1,25 @@
+net users-> lista os usuários do seu computador
+
+net user username+password +/add->cria um novo usuário
+
+ex:net user "Siswe Calege" 1234 /add
+
+net user "Siswe Calege" 12345-> como já existe um usuário de nome Siswe Calege, este commando vai alterar o password
+
+net user+username+ /delete->commando para deletar um usuário
+
+ex: net user "Siswe Calege" /delete 
+
+net localgroup->lista as categorias em que um usuário pode ser encaixado
+
+net localgroup+categoria+username+ /add-> adiciona o usuário à uma determinada categoria
+
+ex: net localgroup Administrators "Siswe Calege" /add
+
+net localgroup+categoria->lista todos os usuários Nessa determinada categoria
+
+ex:net localgroup Administrators
+
+net localgroup+categoria+username+ /delete->elimina o usuário dessa determinada categoria
+
+ex:net localgroup Administrators "Siswe Calege" /delete

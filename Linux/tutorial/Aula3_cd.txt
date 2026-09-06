@@ -1,0 +1,27 @@
+cd->usado para navegar entre directorios e pastas
+
+cd ou cd ~ ->leva para o directorio home
+
+cd /->leva para o directorio root
+
+cd ..-> leva para o directorio pai do directorio actual(recua um directorio)
+
+cd+relative path
+
+ex:cd Documents
+
+cd+ absolute path
+
+ex: cd /home/miracle-calege/Documents
+
+//supondo que exista uma pasta com espaco
+
+My books-> nome da pasta
+
+cd My books->nao resultara
+
+cd My\ books->resultara
+
+cd "My books"->resultara
+
+cd 'My books'->resultara

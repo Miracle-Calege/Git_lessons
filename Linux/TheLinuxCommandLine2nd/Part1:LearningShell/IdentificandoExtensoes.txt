@@ -1,0 +1,11 @@
+file-> permite nos saber a extensao de um determinado ficheiro.
+
+NB:Nao é obrigatório colocar a extensao dos ficheiros durante a nomeaçao.
+
+Sintaxe:
+
+file nomeFicheiro
+
+ex:file test.txt
+
+NB: Colocamos ".txt" no caso acima porque é assim que foi nomeado o ficheiro.

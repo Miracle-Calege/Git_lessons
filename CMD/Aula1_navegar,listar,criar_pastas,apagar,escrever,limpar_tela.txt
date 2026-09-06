@@ -1,0 +1,56 @@
+cd-> usado para navegar directórios/pastas
+cd..-> usado para ir para o directorio/pasta anterior ao actual
+
+cd+directório/pasta-> irá para a pasta indicada
+
+ex:cd users
+
+NB:Devemos deixar um espaço entre o commando e o directório/pasta 
+
+dir-> lista tudo que tem num determinado directorio/pasta
+
+md/mkdir->commando usado para criar pastas
+
+//como usar
+md+nome à sua escolha
+
+ex:md aula1
+
+rd->usado para apagar pastas(este comando só apaga pastas vazias )
+
+//como usar
+rd+nome da pasta
+ex:aula1
+
+Para apagar pastas com conteúdos usamos:
+
+rd /s+nome da pasta
+
+ex:rd /s aula1
+
+
+echo->usado para criar e escrever qualquer tipo e arquivo
+//como usar
+
+echo+">"+nome à sua escolha."extensão"
+
+ex:echo > aula1.txt 
+
+1.Para deletar, primeira maneira
+del->para deletar arquivo
+//como usar
+del+nome o arquivo."extensão"
+
+ex:del aula1.txt
+
+2.Segunda maneira
+erase->para deletar arquivo
+//como usar
+erase+nome o arquivo."extensão"
+
+ex:erase aula1.txt
+
+cls->limpa a tela
+
+
+

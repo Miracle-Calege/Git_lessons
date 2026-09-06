@@ -1,0 +1,49 @@
+#-> usado para comentar uma linha do script
+
+variaveis-> onde podemos guardar valores do nosso script
+
+Existem variaveis do linux(ex:BASH,PWD,HOME) e as criadas pelo usuario.
+
+$-> usamos para acessar o valor das nossas variaveis.
+
+//como usar $
+
+$nome da variavel
+
+ex:$PWD
+
+// Como criar uma variavel
+
+nome da variavel(a sua escolha)=valor que quer guardar na variavel
+
+ex: nome=Miracle
+
+NB:Nome da variavel nao pode comecar por um numero.
+
+/****************************************************************/
+Exemplo do script
+
+#!/usr/bin/bash
+echo "Hello World"
+
+#As variaveis abaixo sao nativas do linux
+echo O nome do nosso shell e $BASH
+echo O nome da versao do nosso shell e $BASH_VERSION
+echo O nosso directorio home e $HOME
+echo O nosso directorio actual e $PWD
+
+#variavel criada por mim
+
+nome=Miracle
+valor=10
+echo Chamo-me $nome
+echo Valor $valor
+
+
+
+
+
+
+
+
+

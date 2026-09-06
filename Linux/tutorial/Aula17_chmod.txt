@@ -1,0 +1,46 @@
+-rw-rw-r-- 1 miracle-calege miracle-calege   41 Feb 13 15:33 big.txt  (informacao gerada por ls -l)
+
+"-" antes do primeiro rw indica que e um ficheiro comum(se aparecer d significa que e um directorio)
+rw- depois do primeiro "-" permissao do dono do ficheiro
+rw- outo par, permissoes do grupo
+r-- permissao para os outros
+1->numero de links simbolicos
+miracle-calege->nome do dono do ficheiro
+miracle-calege->nome do grupo
+41->tamanho do ficheiro
+Feb 13 15:33->data em que o ficheiro foi criado
+big.txt->nome do ficheiro
+
+
+Tipos de permissao
+r->read
+W->write
+x->executable
+
+chmod->altera a permissao de um ficheiro
+
+o=others
+g=group
+u=user
+a=all
++->adicionar a permissao
+- -> remover a permissao
+
+//como usar
+
+chmod  entidade +/- tipo de permissao ficheiro
+
+chmod o+x big.txt
+
+
+chmod ug=rwx big.txt-> coloca a permissao rwx para user e group(= substitui as permissoes anteriores e estabelece as novas)
+
+chmod ugo-rwx big.txt-> remove a permissao rwx no user, group e others
+
+chmod a-rwx big.txt->remove a permissao rwx para todos
+ 
+
+
+
+
+

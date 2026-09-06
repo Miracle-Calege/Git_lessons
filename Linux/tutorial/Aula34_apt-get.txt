@@ -1,0 +1,21 @@
+apt-get(para so baseados em Debian)-> usado para instalar, actualizar, remover e gerir pacotes de software. Usamos este comando com sudo.
+
+
+sudo apt-get update-> retorna a mais recente lista de pacotes no repositório remoto(faz refresh do cache) assegurando que o sistema saiba que existam actualizações disponíveis.
+
+
+//Para instalar um software
+
+sudo apt-get install nome do software
+
+ex:sudo apt-get install php
+
+//Para desinstalar um software
+
+sudo apt-get remove nome do software
+
+ex:sudo apt-get remove php (não apaga as configurações desse programa)
+
+ex2:sudo apt-get remove --purge php (apaga as configurações desse programa)
+
+ex3: sudo apt-get autoremove(Remove pacotes que foram instalados automaticamente para satisfazer dependências de outros pacotes, mas que agora não são mais necessários-usar depois de apagar o tal software).

@@ -1,0 +1,27 @@
+ifconfig-> exibe e permite mudar as configurações de rede no computador.
+
+
+ifconfig
+
+exibe o identificador da placa de rede(ethernet), o localhost(lo- localhost) e adaptador wifi.
+
+UP-significa que está ligado
+mtu->tamanho máximo por pacote
+running-> conectado
+
+//para exibir informação de uma determinada interface
+
+//como usar
+
+ifconfig interface
+
+ex:ifconfig wlp58s0;
+
+//para activar ou desactivar uma interface(deve ser usado com sudo)
+up->activar
+down->desactivar
+
+ifconfig interface up/down
+
+ex:sudo ifconfig wlp58s0 down
+

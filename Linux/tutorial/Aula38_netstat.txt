@@ -1,0 +1,41 @@
+netstat-> exibe conexões de rede, portas, tabela de roteamento e estatísticas de interfaces.
+
+
+netstat -a-> exibe todas as conexões.
+
+|(pipe)-> permite que o resultado de um comando seja manipulado pelo outro comando antes de ser exibido no terminal
+
+netstat -a | less->permite navegar página à página.
+
+netstat -at | less-> exibe conexões tcp
+
+netstat -au | less-> exibe conexões udp
+
+netstat -l | less-> exibe portas que estão no estado listening
+
+netstat -lt | less-> exibe portas que estão no estado listening tcp
+
+netstat -lu | less-> exibe portas que estão no estado listening udp
+
+netstat -s | less-> exibe as estatísticas
+
+netstat -n | less-> exibe as portas numéricas
+
+netstat -p | less-> exibe o PID relacionado a conexão
+
+netstat -c | less-> exibe a estatística da rede continuamente
+
+netstat -ie -> exibe o mesmo resultado que ifconfig exibiria
+
+
+netstat -an | grep 'padrão'-> exibe as portas com o determinado padrão
+
+NB:Pode se usar o grep como filtro dos resultados obtidos.
+
+ex: netstat -an |grep ':53'
+
+
+
+
+
+

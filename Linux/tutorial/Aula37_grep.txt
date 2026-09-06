@@ -1,0 +1,19 @@
+grep-> usado para procurar um padrão, palavras ou frases num texto.
+
+
+//como usar
+
+grep "palavra/frase/padrão" nome(s) do(s) ficheiro(s)
+
+ex:grep "options" file.txt (vai retornar todas as frases/linhas que options consta)
+
+ex2:grep -i "options" file.txt (retornar tanto maiúsculos e minúsculas)
+
+ex3:grep -n "options" file.txt (retornar também o número da(s) linha(s))
+
+ex4:grep -n "options" file.txt file2.txt file3.txt
+
+ex5:grep -n "options"*(procura em todos os ficheiros na pasta/directório actual)
+
+ex6:grep -v "options" file.txt (exibe as frases/linhas que não contem essa palavra)
+

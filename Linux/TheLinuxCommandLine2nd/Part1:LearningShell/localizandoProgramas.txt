@@ -1,0 +1,14 @@
+which-> exibe a localizaçao de um programa executável.
+
+
+Sintaxe:
+
+which comando
+
+ex: which ls
+
+ex2: which firefox
+
+
+
+NB:Which só funciona para programas executáveis(nao para builtins ou alias)

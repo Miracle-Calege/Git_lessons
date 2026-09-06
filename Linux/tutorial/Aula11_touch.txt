@@ -1,0 +1,12 @@
+touch-> cria ficheiros vazios e muda o horario de criacao do ficheiro(so para ficheiros ja existentes)
+
+//como usar
+touch+nome(ao seu criterio)
+ex: touch file2
+
+touch+nome(ao seu criterio)."extensao"
+ex2:touch file3.txt
+
+//usando em ficheiros que ja existem
+
+ex:touch file2-> supondo que o ficheiro file2 foi criado no dia 12/02/2026 as 15:30 se o comando for executado novamente hoje a data de criacao sera 13/02/2026 as 16:12

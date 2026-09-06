@@ -1,0 +1,86 @@
+ls-> é usado para listar ficheiros e subdirectórios no directório actual.
+
+
+
+*************************************************Listando conteúdo de outros directórios************************************************************************
+
+Sintaxe:
+
+ls caminho
+
+ex: ls /usr
+
+NB: Podemos listar múltiplos directórios.
+
+Sintaxe: 
+
+ls dir1 dir2 dirN
+
+ex: ls ~ /usr
+
+NB:~ representa o directório home.
+
+
+*************************************************Formatando a listagem************************************************************************
+
+Sintaxe:
+Comando -opcoes argumentos
+
+opcoes(options)->modificam o comportamento do comando.Podem ser geralmente um caracter precedido por um "-" ou uma sequência de caracteres seguidas por dois "-".
+
+argumentos(arguments)->o item sobre o qual o comando age.
+
+NB: Esta sintaxe é válida para a maioria dos comandos.
+
+ex:ls -lt
+
+ex2: ls -lt --reverse
+
+***********************************************As opcoes vais comuns******************************************************************************
+
+	Option                Long option                  Descriçao
+	-a			--all			   Lista todos os ficheiros mesmo aqueles que iniciam por ponto(os ocultos).
+	
+	-A			--almost-all		  Faz o mesmo que o comando anterior mas nao exibe os directórios (. e ..).
+	
+	-d			--directory		  lista o directório e nao o seu conteúdo.Ideal para usar com "l".
+	
+	-F			--classify 		Coloca um caracter indicador no fim que cada ficheiro listado.Coloca "/" no ficheiros que sao directórios.
+	
+	-h			--human-readable	Exibe o dados em bytes.(Só funciona no formato long usando "l" juntamente).
+	
+	-l						Exibe a listagem na forma longa(lista tamanho,data,permissoes).
+	
+	-r                      --reverse               Exibe a listagem na ordem reversa(Geralmente o ls exibe os dados obedecendo a ordem alfabetica).
+	
+	-S						Organiza a listagerm pelo tamanho do ficheiro(do maior para o menor).
+	
+	-t						Organiza a listagem pelo dia de modificaçao.
+
+
+**********************************************Examinando o output do ls- l*******************************************************************************
+
+Se inserirmos no terminal ls -l teremos algo parecido:
+
+1  2	3  4	5   6            7                8	     9                               10
+- rw- --- ---  1 miracle-calege miracle-calege   3623 May  6 17:42  2026-05-06-15-42-18.060-VirtualBoxVM-4026.log
+
+1.O primeiro caracter indica o tipo de ficheiro.O "-"indica que é um ficheiro normal(se fosse "d" seria um directório).
+
+2.Sao os direitos de acesso ao ficheiro.
+
+3.Membros do grupo do ficheiro
+
+4.Qualquer outro
+
+5.Número de hard links do ficheiros
+
+6.O username do dono do ficheiro
+
+7.O nome do grupo donos do ficheiro
+
+8.tamanho do ficheiro em bytes
+
+9.horas e data
+
+10.nome do ficheiro.

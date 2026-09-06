@@ -1,0 +1,31 @@
+//como executar diversos comando em simultâneo
+
+1. Método usando:";"
+
+//como usar
+
+primeiro comando;segundo comando, outro comando(opcional)
+
+ex: ls;pwd
+
+NB:Se o primeiro comando não existir o próximo será executado se existir.
+
+2. Método usando: "&&"
+
+//como usar
+
+primeiro comando && segundo comando && outro comando(opcional)
+
+ex: ls && pwd
+
+NB:Se o primeiro comando não existir  o próximo não será executado.
+
+3. Método usando:"||"-> comando or, se o primeiro comando existir apenas ele será executado, se não existir executará outro
+
+//como usar
+
+primeiro comando || segundo comando || outro comando(opcional)
+
+ex:ls || pwd-> aqui só serão listados os conteúdos do directório, a localização actual não será exibida(o pwd não será executado).
+
+NB:Os comandos são executados em sequência(em ordem de disposição).

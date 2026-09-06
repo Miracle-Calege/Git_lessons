@@ -1,0 +1,11 @@
+netstat->exibe 4 colunas das quais proto:tipo de protocol(TCP/UDP), endereço local-> ip do computador na rede:a porta que o computador está usando ,endereço remoto-> ip do servidor:porta do servidor,estado(estabelecido, esperando, tempo esgotado e conexao encerrada)
+
+
+netstat -an->exibe todas as conexoes e portas esperando conexao(-a) + exibe endereços e numero de portas na forma numerica(-n)
+
+netstat -f-> mostra o nome complete do dominio inves de mostrar o ip
+
+netstat -an | find /I "listening"-> retornará somente os endereços que estão no estado LISTENING, "|" serve para enviar o resultado de um comando para o outro, ou seja, o resultado do netstat -an foi filtrado pelo find.
+
+
+net view->Listar computadores visíveis na sua rede local (LAN).

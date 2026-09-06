@@ -1,0 +1,64 @@
+
+Estrutura para usar blocos if
+
+if [condicao]
+then
+   comando -> comando a ser executada se a condicao  acima for verdadeira
+  
+  elif [condicao]
+  
+  then
+  comando -> comando a ser executada se a condicao acima verdadeira
+  
+else 
+comando -> comando a ser executada se nenhuma das condicoes acima for verdadeira 
+
+fi-> indica o fim do if   
+
+/*******************************************************************************/
+Operadores de comparacao para integer
+
+-eq->  é igual a           
+ex: if["$a" -eq "$b"]
+
+-ne-> não é igual a
+ex: if["$a" -ne "$b"]
+
+-gt-> é maior que 
+ex: if["$a" -gt "$b"]
+
+-lt-> é menor  que
+ex: if["$a" -lt "$b"]
+
+-le-> é menor ou igual
+ex: if["$a" -le "$b"]
+
+<- é menor que 
+ex: if(("$a" < "$b"))
+
+<=- é menor ou igual
+ex: if(("$a" <= "$b"))
+
+>- é maior que
+ex: if(("$a" > "$b"))
+
+>=-é maior ou igual
+ex: if(("$a" >= "$b"))
+
+/*******************************************************************************/
+
+Comparação de strings
+
+=-> igual a
+ex: if["$a" = "$b"]
+
+==->igual a
+ex: if["$a" == "$b"]
+
+!= -> diferente de 
+ex: if["$a" != "$b"]
+
+<- é menor que (no alfabeto ASCII)
+ex: if [[ "$a" < "$b" ]]
+>- é maior que (no alfabeto ASCII)
+ex: if [["$a" > "$b"]]

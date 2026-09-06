@@ -1,0 +1,46 @@
+//para criar uma funcao
+
+:nome da funcao
+
+ex-> :fim
+
+goto->usado para chamar uma função para ser executada num certo bloco/trecho
+
+exemplo numa batch
+
+@echo off
+goto test
+:fim 
+echo fim do programa!!
+:test 
+echo testando!!
+pause>nul
+
+//for... do-> commando usado para loop
+
+for %%n in (x,y,z) do echo %%n;
+
+quer dizer: para cada n em (x,y,z) faça comando
+n assume os valores entre parenteses.
+
+ex:
+@echo off
+for %%n in (notepad.exe,notepad.exe) do start %%n
+pause>nul
+
+ex2:
+
+/l-> permite o for trabalhar com valores numericos
+(0,1,10) 0-valor inicial, 1-o valor de incremento, 10-o valor final que n pode assumir 
+@echo off
+for /L %%n in (0,1,10) do echo %%n
+pause>nul
+
+<: usado para ler dados
+
+ex:
+@echo off
+set /p var=<testo.txt
+echo %var%
+pause>nul 
+

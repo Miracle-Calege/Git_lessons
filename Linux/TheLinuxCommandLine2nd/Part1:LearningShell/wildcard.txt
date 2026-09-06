@@ -1,0 +1,81 @@
+wildcards->sao caracteres especiais que auxiliam na especificaçao de grupos de nomes de ficheiros.
+
+
+
+wildcard                                    significado
+
+*					   corresponde a quaisquer caracteres
+
+?					   corresponde a qualquer caracter único
+
+[caracteres]				   corresponde a qualquer caracter que faz parte do conjunto de caracteres
+
+
+[!caracteres]				 corresponde a qualquer caracter que nao faz parte do conjunto de caracteres
+
+[[:classe:]]				corresponde a qualquer caracter que faz parte da classe especificada
+
+
+
+
+
+Caracteres de classe 					Significado
+
+
+[:alnum:]					    corresponde a qualquer caracter alfanumérico
+
+[:alpha:]					   corresponde a qualquer caracter alfabético
+
+[:digit:]					  corresponde a qualquer valores númerico
+
+[:lower:]					 corresponde a qualquer letra minúscula
+
+[:upper:] 					corresponde a qualquer letra maiúscula
+
+
+
+******************************************************Exemplos do uso de wildcards*********************************************************************************************************
+
+
+Padrao 						Correspondência
+
+*						Todos ficheiros
+
+g*                                              Todos ficheiros que iniciam por g
+
+b*.txt						Todos ficheiros que iniciam por b e terminam por .txt
+
+
+Data???						Todos ficheiros que iniciam por Data seguidos de 3 caracteres
+
+[abc]*						Todos ficheiros que começam ou por a ou por b ou por c
+
+
+BACKUP.[0-9][0-9][0-9]				Qualquer ficheiros iniciado por BACKUP. seguidos por 3 numeros
+
+[[:upper:]]*					Qualquer ficheiro que iniciam por letras maiúsculas
+
+[![:digit:]]*					qualquer ficheiro que nao inicie por um número
+
+*[[:lower:]123]					qualquer ficheiro terminado por uma letra maiúscula ou um número entre [1-3]
+
+
+
+
+
+NB:Wildcards podem ser usados com qualquer comando que aceita nomes de ficheiros como argumento
+	
+	
+	
+	
+	
+*******************************************Observaçoes****************************************************************************************************
+
+Podemos usar willcard com a GUI das distros.
+
+Para a nautilus, gestor de ficheiros do GNOME basta usar ctrl+S vai abrir uma janela onde podemos colocar o wildcard e vai destacar os ficheiros que correspodem a pesquisa.
+
+E os gestores de ficheiros do KDE  permitem colocar as wildcards no caminho do ficheiro. ex: /usr/bin/u*
+
+
+

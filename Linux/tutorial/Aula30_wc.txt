@@ -1,0 +1,7 @@
+wc-> imprime o número de palavras, novas linhas e caracteres(bytes) num ficheiro.
+
+A primeira coluna-> número de linhas
+A segunda coluna-> número de colunas
+A terceira coluna-> número de caracteres
+
+

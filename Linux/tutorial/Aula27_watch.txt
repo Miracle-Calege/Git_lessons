@@ -1,0 +1,9 @@
+watch->usado para correr scripts num intervalo regular ou repetidamente.(Por defeito o intervalo de tempo de watch é de 2 segundos)
+
+//como usar watch +comando
+
+ex: watch free -m
+
+//para mudar o intervalo de tempo: watch -n tempo comando.(O tempo não pode ser inferior à 0.1).
+
+ex: watch -n 1 free -m 

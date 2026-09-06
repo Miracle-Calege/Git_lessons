@@ -1,0 +1,7 @@
+.bashrc arquivo-> é um script que é executado sempre que abrimos o terminal.
+
+Podemos modificar este arquivo usando nano .bashrc ou gedit .bashrc
+
+//Vou adicionar na última linha deste ficheiro echo "Bem Vindo Miracle Calege"
+Sempre que eu abrir vai aparecer primeiro : Bem Vindo Miracle Calege e abaixo o prompt
+

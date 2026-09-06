@@ -1,0 +1,29 @@
+copy-> commando usado para copiar um arquivo de um directorio para o outro
+xcopy->copia ficheiro,directórios incluíndo subdirectórios
+robocopy-> mais actualizada e robusta em relação as supracitadas
+
+
+//como usar
+
+copy+ arquivo/ficheiro+destino
+ex:copy oi.txt "C:\Users\Miracle Calege\Desktop\burlando\burlando2"
+
+attrib-> exibe ou altera atributos de ficheiros, este commando pode fazer com que um ficheiro so seja permitido ser lido e nao alterado, etc
+
+//Como usar
+
+attrib não é usado só, deve ser combinado com algumas letras
+(attrib /? nos fornece mais informações)
+
+NB: o "+" antes das letras active o atributo, para desactivar devemos colocar "-" antes da letra
+
+ attrib+"+/-"+letra+ficheiro
+
+
+ex:attrib +h oi.txt -> faz com que o ficheiro fiquei oculto(invisivel)
+
+ex2:attrib +r oi.txt-> faz com que o ficheiro só tenha permissao para ser lido e não escrito
+
+ex3:attrib -h oi.txt -> o ficheiro oi.txt estava oculto no ex1 mas agora tornou-se visível novamente
+
+ex4:attrib -r oi.txt->o ficheiro já pode ser escrito

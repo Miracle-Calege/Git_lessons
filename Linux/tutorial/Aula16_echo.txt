@@ -1,0 +1,32 @@
+echo->exibe o que escrevemos no terminal(util para scripts)
+//como usar
+
+echo+frase/palavra
+
+ex: echo "hello world"
+NB: e boa pratica colocar o texto entre aspas ("")
+
+resultado: hello world(o que vai ser exibido pelo terminal)
+
+//como criar uma variavel 
+
+nome da variavel=valor;
+
+ex: var="Mark"(nao deve haver nenhum espaco entre o nome da variavel e o sinal de igualdade)
+NB: assim que o terminal for fechado essa variavel nao existira mais
+
+ex2:x=10;
+
+// para saber o valor da variavel 
+
+echo $nome da variavel			
+
+ex: echo $var
+
+ex2:echo "o valor de x e $x" 
+
+echo -e->permite usar \t, \n e outras combinacoes com \
+
+ex: echo -e 'some\ntext'
+resultado:some
+	  text

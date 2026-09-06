@@ -1,0 +1,15 @@
+shortcut para abrir o terminal ctrl+Alt+T
+NB:por defeito ao abrir o terminal estaremos no directorio home
+
+O directorio primario do linux chama se root representado por "/".
+
+pwd(present working directory)->mostra em que directorio estamos actualmente
+
+cd(change directory)-> navega pelos directorios
+
+ex: cd / ->ira para o directorio raiz(root)
+
+ls->lista todos os ficheiros no directorio actual
+
+
+

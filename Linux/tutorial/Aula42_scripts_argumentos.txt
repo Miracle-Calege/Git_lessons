@@ -1,0 +1,41 @@
+Argumentos sao valores que sao passados ao script, argumentos sao valores que sao armazenados em variaveis nativas do linux($1 $2 $3...).
+
+NB:$0 refere-se ao nome do arquivo bash
+
+estes argumentos sao colocados durante a execucao do script.
+
+//Como passar argumentos para um script
+
+1.Metodo
+ ./nome do arquivo.sh arg1  arg2  arg3
+
+ex: ./myFourthScript.sh Mark Tom John
+
+2.Metodo (criando um array)
+criar um array:nome=(argumentos)
+
+"$@"-> usado para representar todos os argumentos
+
+ex: args=("$@")-> essa linha deve estar dentro do script.
+
+$#-> imprime a quantidade total de argumentos
+
+
+/****************************************************************************/
+Exemplo do script
+
+#!/usr/bin/bash
+echo $0 $1 $2 $3 '> echo $1 $2 $3' # echo $1 $2 $3 vai exibir os valores dos argumentos
+args=("$@") #criamos um array que armazena todos os argumentos "$@"
+echo ${args[0]}  ${args[1]}  #imprime os argumentos cujo os indices foram acessados
+echo $@ #imprime todos os argumentos
+echo $# #imprime o numero de argumentos contidos no array
+
+
+
+
+
+
+
+
+

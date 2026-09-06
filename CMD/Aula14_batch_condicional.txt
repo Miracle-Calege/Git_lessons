@@ -1,0 +1,18 @@
+//condicional
+
+//Estrutura
+
+if %variável1% condição %variável2% (condição caso seja verdadeira) (condição caso seja falsa) 
+
+ex:
+@echo off
+set num1=10
+set num2=11
+if %num1% LSS %num2% (echo verdadeiro) else (echo falso)
+pause>nul
+
+//Operadores
+LSS-less(menor)
+LEQ-menor ou igual
+GTR-maior
+GEQ-maior ou igual

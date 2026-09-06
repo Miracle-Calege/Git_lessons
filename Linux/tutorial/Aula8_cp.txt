@@ -1,0 +1,27 @@
+cp-> usado para copiar arquivos e directorios
+
+// como usar
+
+cp + nome(s) do(s) ficheiro(s) + destino(se o destino nao existir, o comando cria)
+
+ex: cp file1.txt  file2.txt
+
+ex2:cp file1.txt dir1
+
+ex3: cp file2.txt file1.txt dir1-> mandando mais de um ficheiro para uma past/directorio
+
+
+cp -i file2.txt file1.txt dir1-> sabendo que ja existe um ficheiro com nome file1.txt o comando -i pergunta se queremos subescrever o ficheiro existe ou nao
+
+
+
+cp ../file1.txt ../file2.txt . -> .. significa directorio anterior, . directorio actual
+
+,ou seja, copiei o ficheiro do directorio anterior file1.txt e directorio anterior file2.txt para o directorio actual 
+
+cp ../file1.txt ../file2.txt /home/miracle-calege/Desktop/dir1-> usando caminho absoluto
+
+
+cp -R +nome do directorio a se copiado +directorio destino-> para copiar conteudos do directorio para um outro(se o directorio destino nao existir sera criado) mas se a pasta destino ja existir todo o directorio sera copiado(nao o conteudo do directorio)
+
+

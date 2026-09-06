@@ -1,0 +1,35 @@
+rm/rmdir-> para apagar directorios/pastas
+
+//como usar
+
+rmdir+directorio/pasta
+
+ex: rmdir abc
+
+//para apagar directorio com subdirectorios
+
+rmdir -p dir1/dir2/dir3
+
+
+ex:rmdir -p a/b/c/d/e
+
+NB:rmdir a/b/c/d/e -> so vai apagar o ultimo directorio, neste caso o e,
+
+rmdir -pv +directorios-> exibe a sequencia de como sao apagados os directorios
+ 
+ex: rmdir -pv a/b/c/d/e
+
+ls -R-> exibe toda a estrutura de directorios com subdirectorios
+
+rm-> usado para apagar directorios/pastas com ficheiro(apaga os directorios e tudo o que tem dentro)
+
+//como usar
+rm -r +directorio pai/mae(o comando deve nao deve ser executa enquanto esta-se dentro do directorio), ou seja, se eu estiver na pasta a nao vou poder apagar enquanto estou dentro dela, devo apagar estando no directorio raiz/mae dela
+
+ex:rm -r a
+
+ex:rm -rv a-> para detalhar como os directorios estao a ser apagados
+
+ 
+
+

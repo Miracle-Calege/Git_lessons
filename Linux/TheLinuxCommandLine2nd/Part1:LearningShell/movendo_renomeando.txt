@@ -1,0 +1,62 @@
+mv-> é usado para mover e renomear ficheiros ou directórios.
+
+
+***************************************Renomenando/movendo ficheiros/directórios**********************************************************************************************************
+
+Sintaxe:
+
+mv item1 item2
+
+NB:Considerando do item pode ser um ficheiro ou directório.
+
+
+ex1: mv texto.txt tc
+
+Movi o ficheiro texto.txt para o directório/pasta tc(o directório deve existir).
+
+ex2:mv texto.txt testa.txt
+
+Mudei o nome do ficheiro texto.txt para testa.txt
+
+ex3:mv tc teoriaComp
+
+Mudei o nome do directório/pasta tc para teoriaComp
+
+ex4: mv t1.txt t2.txt 
+
+NB: Neste caso ambos os ficheiros t1 e t2 existem.O conteúdo do t1 vai sobescrever o conteúdo do t2 e o t1 vai deixar de existir.
+
+
+******************************************Algumas options úteis****************************************************************************************************************************
+
+Option					Significado
+
+-i,--interactive			Antes de subsescrever um ficheiro existente vai pedir a confirmaçao do user.
+
+
+-u, --update				move somente os ficheiros que nao existem(ou mais recentes) para directório destino
+
+
+-v, --verbose				exibe uma mensagem informativa acerca de como a movimentaçao está a ser executada.
+
+
+
+******************************************Alguns exemplos****************************************************************************************************************************
+
+Comando						Resultado
+
+mv dir1 dir2					Se o dir2 nao existir  será criado e o dir1 deixará de existir
+
+
+
+NB: cp vs mv
+
+Ambos comandos tem comportamentos similares mas diferem num ponto:
+
+cp-> mantem todos os ficheiros após a copia.
+
+mv-> move para o destino final e elimina o destino de partida.
+
+
+
+

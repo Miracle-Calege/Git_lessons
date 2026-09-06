@@ -1,0 +1,13 @@
+top->usado para ver a performance do cpu e da memoria(quais processos estao a consumir e em que escala estao a consumir esses recursos)
+
+s-> usado para mudar o tempo com que os dados sao exibidos antes de serem actualizados
+i->usado para mostrar apenas os processos activos (clicado novamente exibe novamente a tabela completa com os processos nao activos tambem)
+k->usado para terminar um processo(o terminal vai pedir o PID do processo)
+q-> para sair do comando top
+
+// este comando exibe colunas como:
+
+PID-> process ID,todo processo tem o seu ID (PID)
+COMMAND->mostra quais sao os processos que estao a ser executados 
+
+

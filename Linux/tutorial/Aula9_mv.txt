@@ -1,0 +1,21 @@
+mv->usado para renomear e mover  arquivos
+
+//Para renomear
+
+mv+ nome ficheiro antigo + nome novo
+
+ex: mv file1.txt file2.txt -> o ficheiro file1.txt chama-se agora file2.txt 
+
+// para mover
+
+mv+ nome do ficheiro+ destino
+
+ex: mv file3.txt dir1
+
+mv -i file3.txt dir1 -> -i e usado para casos em que temos ficheiros com mesmo nome e o terminal pergunta se queremos fazer overwirte ou nao(y-sim e n-nao)
+
+ex2: mv dir1 dir2 (move a pasta dir1 para o dir2 ), mas se o dir2 nao existisse o comando mv simplesmente nomearia o dir1 em dir2
+
+mv -v+ficheiro +destino-> detalha como o processo de mudanca/renomeacao decorreu
+
+

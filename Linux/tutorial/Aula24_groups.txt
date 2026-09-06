@@ -1,0 +1,26 @@
+groups-> exibe os grupos em que me usuário faz parte
+
+cat /etc/group-> exibe todos os grupos do nosso sistema operativo
+
+groupadd-> adiciona/cria um novo grupo
+
+//como usar
+
+sudo groupadd nome do grupo
+
+ex:sudo groupadd java
+
+groupdel->usado para deletar um grupo
+
+//como usar
+
+sudo groupdel nome do grupo
+
+ex:sudo groupdel java
+
+gpasswd-> para adicionar/remover um usuário à um grupo já existente
+
+sudo gpasswd -a nome do usuario nome do grupo(-a para adicionar)
+sudo gpasswd -d nome do usuario nome do grupo(-d para remover)
+
+

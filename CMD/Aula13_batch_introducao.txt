@@ -1,0 +1,51 @@
+Batch-> é a criação de um arquivo executável onde lá colocamos algumas instruções.
+
+//como criar
+1.Criar um arquivo com extensao .cmd ou .bat
+2.Dentro do arquivo criado no ponto 1, colocar as instruções desejadas
+3.Abrir o ficheiro.
+
+@echo off-> é um commando usado para apagar/limpar o prompt
+pause-> exibe uma mensagem até que o usuário pressione uma Tecla qualquer
+pause> nul-> impede que a mensagem por definação do pause seja exibida
+
+//para declarar variáveis
+/a-> indica que a variável é numérica-inteiro
+/p-> recebe o valor pelo teclado
+
+Geralmente não é necessário especificar o tipo de variável
+set tipo de variável nome(a sua escolha)=valor
+ex:set /a num=8;
+ex1:set num=8; também é válido
+
+//para exibir a variável
+echo %variável%
+ex:echo %num%
+
+//Exemplo de um script.bat
+
+@echo off-> linha inicial
+set /a num=8
+set /p valor="Digite o valor:"(sempre que tivermos o /p, ele será executado antes das outras instruções mesmo não sendo a primeira instrução)
+echo %num%
+echo Hello world!
+pause>nul->linha final
+
+set /p="Digite o valor:"->também é válido para linha3
+
+//rem->usado para comentar/ignorar uma linha de comando
+
+//Exemplo2
+@echo off
+set /a num1=8
+set /a num2=10
+set /a resposta=%num1%+%num2%->para fazer operações aritméticas rodeamos cada variável com "%" e adicionamos o operador entre os valores
+rem set /p="Digite o valor:"
+echo %resposta%
+echo Hello world!
+pause>nul
+
+%%->operador de módulo
+
+
+
